@@ -1,0 +1,86 @@
+(DELAYFILE 
+(SDFVERSION "3.0" )
+(DESIGN "XilinxIntro")
+(DATE "Mon Aug 31 18:11:04 2026")
+(VENDOR "XILINX")
+(PROGRAM "Vivado")
+(VERSION "2019.1")
+(DIVIDER /)
+(TIMESCALE 1ps)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE i_a_IBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (1409.0:1479.6:1479.6) (1409.0:1479.6:1479.6))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE i_b_IBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (1407.0:1477.6:1477.6) (1407.0:1477.6:1477.6))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE i_s0_IBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (1414.5:1485.1:1485.1) (1414.5:1485.1:1485.1))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE i_s1_IBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (1406.6:1477.2:1477.2) (1406.6:1477.2:1477.2))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE o_result_OBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (3317.3:3519.4:3519.4) (3317.3:3519.4:3519.4))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "LUT4")
+  (INSTANCE o_result_OBUF_inst_i_1)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I3 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+      (IOPATH I2 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+      (IOPATH I1 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+      (IOPATH I0 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+    )
+  )
+)
+(CELL 
+    (CELLTYPE "XilinxIntro")
+    (INSTANCE )
+    (DELAY
+      (ABSOLUTE
+      (INTERCONNECT i_a_IBUF_inst/O o_result_OBUF_inst_i_1/I0 (903.9:1069.9:1069.9) (903.9:1069.9:1069.9))
+      (INTERCONNECT i_b_IBUF_inst/O o_result_OBUF_inst_i_1/I1 (1317.1:1571.1:1571.1) (1317.1:1571.1:1571.1))
+      (INTERCONNECT i_s0_IBUF_inst/O o_result_OBUF_inst_i_1/I2 (1324.7:1576.7:1576.7) (1324.7:1576.7:1576.7))
+      (INTERCONNECT i_s1_IBUF_inst/O o_result_OBUF_inst_i_1/I3 (1361.8:1598.8:1598.8) (1361.8:1598.8:1598.8))
+      (INTERCONNECT o_result_OBUF_inst_i_1/O o_result_OBUF_inst/I (1974.1:2302.1:2302.1) (1974.1:2302.1:2302.1))
+      )
+    )
+)
+)

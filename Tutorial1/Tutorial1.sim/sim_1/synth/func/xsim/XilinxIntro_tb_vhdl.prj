@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"XilinxIntro_tb_func_synth.vhd" \
+"../../../../../Tutorial1.srcs/sim_1/new/XilinxIntro_tb.vhd" \
+
+# Do not sort compile order
+nosort
