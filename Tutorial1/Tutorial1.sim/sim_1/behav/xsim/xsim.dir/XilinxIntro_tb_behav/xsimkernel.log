@@ -1,7 +1,7 @@
-Running: xsim.dir/XilinxIntro_tb_behav/xsimk.exe -simmode gui -wdb XilinxIntro_tb_behav.wdb -simrunnum 0 -socket 62211
+Running: xsim.dir/XilinxIntro_tb_behav/xsimk.exe -simmode gui -wdb XilinxIntro_tb_behav.wdb -simrunnum 0 -socket 53352
 Design successfully loaded
-Design Loading Memory Usage: 7992 KB (Peak: 7992 KB)
+Design Loading Memory Usage: 6124 KB (Peak: 6124 KB)
 Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 8732 KB (Peak: 8732 KB)
-Simulation CPU Usage: 30 ms
+Simulation Memory Usage: 6744 KB (Peak: 6744 KB)
+Simulation CPU Usage: 15 ms
