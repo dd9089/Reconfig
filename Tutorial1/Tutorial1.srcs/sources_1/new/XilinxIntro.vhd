@@ -44,7 +44,7 @@ end XilinxIntro;
 architecture Behavioral of XilinxIntro is
 begin
 
-    process (i_a, i_b)
+    process (i_a, i_b, i_s1, i_s0)
         variable sel : std_logic_vector(1 downto 0);
 
     begin

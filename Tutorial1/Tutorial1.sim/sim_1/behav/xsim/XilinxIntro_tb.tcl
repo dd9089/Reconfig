@@ -10,5 +10,5 @@ if { [string length $curr_wave] == 0 } {
 
 run 1000ns
 
-source -notrace {simulation_waveform.tcl}
+source -notrace {../../../../Tutorial1.srcs/sim_1/new/simulation_waveform.tcl}
 

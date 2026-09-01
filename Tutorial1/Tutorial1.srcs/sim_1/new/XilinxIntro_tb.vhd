@@ -89,7 +89,17 @@ begin
         wait for 10ns; 
         a <= '1';
         b <= '0';
-        wait for 10 ns;
+        wait for 10ns;
+        a <= '1';
+        b <= '0';
+        s1 <= '0'; s0 <= '0'; --NOT -res should be 0
+        wait for 10ns;
+        s1 <= '0'; s0 <= '1'; --AND -res should be 0
+        wait for 10ns;
+        s1 <= '1'; s0 <= '0'; --OR -res should be 1
+        wait for 10ns;
+        s1 <= '1'; s0 <= '1'; --XOR -res should be 1
+        wait for 10ns;
         
         wait;
     end process;
