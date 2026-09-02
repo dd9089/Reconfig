@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DIEGO/Documents/Reconfig/Hws/Hw1/hw1A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'XilinxIntro'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DIEGO/Documents/Reconfig/Hws/Hw1/hw1_tbA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'XilinxIntro_tb'
