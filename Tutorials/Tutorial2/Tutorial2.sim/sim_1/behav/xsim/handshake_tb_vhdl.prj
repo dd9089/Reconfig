@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Tutorial2.srcs/sources_1/new/consumer.vhd" \
+"../../../../Tutorial2.srcs/sources_1/new/handshakeTop.vhd" \
+"../../../../Tutorial2.srcs/sources_1/new/producer.vhd" \
+"../../../../Tutorial2.srcs/sim_1/new/handshake_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,7 @@
+Running: xsim.dir/handshake_tb_behav/xsimk.exe -simmode gui -wdb handshake_tb_behav.wdb -simrunnum 0 -socket 50905
+Design successfully loaded
+Design Loading Memory Usage: 6488 KB (Peak: 6488 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 7216 KB (Peak: 7216 KB)
+Simulation CPU Usage: 31 ms

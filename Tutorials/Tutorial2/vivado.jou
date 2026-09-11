@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Sep 11 11:47:16 2026
+# Process ID: 20744
+# Current directory: C:/Users/DIEGO/Documents/Reconfig/Tutorials/Tutorial2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15800 C:\Users\DIEGO\Documents\Reconfig\Tutorials\Tutorial2\Tutorial2.xpr
+# Log file: C:/Users/DIEGO/Documents/Reconfig/Tutorials/Tutorial2/vivado.log
+# Journal file: C:/Users/DIEGO/Documents/Reconfig/Tutorials/Tutorial2\vivado.jou
+#-----------------------------------------------------------sstart_guiopen_project C:/Users/DIEGO/Documents/Reconfig/Tutorials/Tutorial2/Tutorial2.xpr
+uupdate_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+launch_simulation
+source handshake_tb.tcl
+restart
+run all
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+close_design
+open_run synth_1 -name synth_1
+synth_design -rtl -name rtl_1
+current_design synth_1
+current_design rtl_1
+current_design synth_1
+set_property STEPS.SYNTH_DESIGN.ARGS.FSM_EXTRACTION one_hot [get_runs synth_1]
+close_design
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+close_design
+set_property STEPS.SYNTH_DESIGN.ARGS.FSM_EXTRACTION sequential [get_runs synth_1]
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_simulation -mode post-synthesis -type functional
+source handshake_tb.tcl
+restart
+run all
+restart
+run all
+close_sim
+close_design
+set_property STEPS.SYNTH_DESIGN.ARGS.FSM_EXTRACTION one_hot [get_runs synth_1]
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_simulation -mode post-synthesis -type functional
+source handshake_tb.tcl
+restart
+run all
+close_sim
+set_property STEPS.SYNTH_DESIGN.ARGS.FSM_EXTRACTION auto [get_runs synth_1]
+close_design
+synth_design -rtl -name rtl_1
