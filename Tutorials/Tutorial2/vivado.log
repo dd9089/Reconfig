@@ -512,3 +512,5 @@ No Unisim elements were transformed.
 RTL Elaboration Complete:  : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2601.410 ; gain = 85.977
 11 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 11 19:52:27 2026...
