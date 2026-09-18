@@ -25,7 +25,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity PS2_behv is
 port (
 
---		CLK_100MHZ : in  std_logic;  -- Main FPGA clock, needed for designs with external clock
+		CLK_100MHZ : in  std_logic;  -- Main FPGA clock, needed for designs with external clock
 
 		PS2_CLK   : in  std_logic;  -- keyboard clock
 		PS2_DATA  : in  std_logic;  -- keyboard data
@@ -41,12 +41,40 @@ architecture Behavioral of PS2_behv is
 	signal sreg : std_logic_vector (7 downto 0);
 	signal shex : std_logic_vector (15 downto 0);
 
-	signal reset : std_logic;
-	signal ssel  : std_logic_vector (0 downto 0);
+	signal reset   : std_logic;
+	signal ssel    : std_logic_vector (0 downto 0);
+	signal new_clk : std_logic;
+	
+	-- Debug signal flags
+	attribute mark_debug : string;
+    attribute mark_debug of PS2_CLK: signal is "true";
+    attribute mark_debug of PS2_DATA: signal is "true";
+    attribute mark_debug of sreg: signal is "true";	
+	
+	component clk_wiz_0
+        port
+         (-- Clock in ports
+          -- Clock out ports
+          clk_out1          : out    std_logic;
+          -- Status and control signals
+          reset             : in     std_logic;
+          clk_in1           : in     std_logic
+         );
+    end component;
 
 begin
 
-	reset <= BTN_UP;
+    your_instance_name : clk_wiz_0
+       port map ( 
+      -- Clock out ports  
+       clk_out1 => new_clk,
+      -- Status and control signals 
+      reset=> BTN_UP,              
+       -- Clock in ports
+       clk_in1 => CLK_100MHZ
+     );
+    
+    reset <= BTN_UP;
 	ssel  <= SWITCH;
 
 	------------------------------------------------------------
