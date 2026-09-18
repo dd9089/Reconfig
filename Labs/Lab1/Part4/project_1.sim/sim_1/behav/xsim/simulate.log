@@ -1,0 +1,5 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Failure: End of tests
+Time: 4350 us  Iteration: 0  Process: /tb_ps2/line__57  File: C:/Users/DIEGO/Documents/Reconfig/Labs/Lab1/Part4/project_1.srcs/sim_1/new/tb_ps2_part4.vhd
+$finish called at time : 4350 us : File "C:/Users/DIEGO/Documents/Reconfig/Labs/Lab1/Part4/project_1.srcs/sim_1/new/tb_ps2_part4.vhd" Line 114

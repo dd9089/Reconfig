@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ps2_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_ps2" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1587685459940fs"></ZoomStartTime>
+      <ZoomEndTime time="2007195845698fs"></ZoomEndTime>
+      <Cursor1Time time="1550000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="127"></NameColumnWidth>
+      <ValueColumnWidth column_width="163"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/tb_ps2/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/ps2_clk_sync" type="array">
+      <obj_property name="ElementShortName">ps2_clk_sync[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ps2_clk_sync[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/sstate" type="other">
+      <obj_property name="ElementShortName">sstate</obj_property>
+      <obj_property name="ObjectShortName">sstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/clk_active" type="logic">
+      <obj_property name="ElementShortName">clk_active</obj_property>
+      <obj_property name="ObjectShortName">clk_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/sclk_enable" type="logic">
+      <obj_property name="ElementShortName">sclk_enable</obj_property>
+      <obj_property name="ObjectShortName">sclk_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/ps2_en" type="logic">
+      <obj_property name="ElementShortName">ps2_en</obj_property>
+      <obj_property name="ObjectShortName">ps2_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/btn_up" type="logic">
+      <obj_property name="ElementShortName">btn_up</obj_property>
+      <obj_property name="ObjectShortName">btn_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/data" type="logic">
+      <obj_property name="ElementShortName">data</obj_property>
+      <obj_property name="ObjectShortName">data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/ps2_data_sync" type="array">
+      <obj_property name="ElementShortName">ps2_data_sync[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ps2_data_sync[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/clk_100Mhz" type="logic">
+      <obj_property name="ElementShortName">clk_100Mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_100Mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/switch" type="array">
+      <obj_property name="ElementShortName">switch[0:0]</obj_property>
+      <obj_property name="ObjectShortName">switch[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/LEDs" type="array">
+      <obj_property name="ElementShortName">LEDs[9:0]</obj_property>
+      <obj_property name="ObjectShortName">LEDs[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/key" type="array">
+      <obj_property name="ElementShortName">key[7:0]</obj_property>
+      <obj_property name="ObjectShortName">key[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/key_par" type="logic">
+      <obj_property name="ElementShortName">key_par</obj_property>
+      <obj_property name="ObjectShortName">key_par</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/break" type="array">
+      <obj_property name="ElementShortName">break[7:0]</obj_property>
+      <obj_property name="ObjectShortName">break[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/break_par" type="logic">
+      <obj_property name="ElementShortName">break_par</obj_property>
+      <obj_property name="ObjectShortName">break_par</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/sreg" type="array">
+      <obj_property name="ElementShortName">sreg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sreg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>
