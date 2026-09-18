@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ps2_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_ps2" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4350000001fs"></ZoomEndTime>
+      <Cursor1Time time="4350000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="127"></NameColumnWidth>
+      <ValueColumnWidth column_width="163"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/tb_ps2/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/sstate" type="other">
+      <obj_property name="ElementShortName">sstate</obj_property>
+      <obj_property name="ObjectShortName">sstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/clk_active" type="logic">
+      <obj_property name="ElementShortName">clk_active</obj_property>
+      <obj_property name="ObjectShortName">clk_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/btn_up" type="logic">
+      <obj_property name="ElementShortName">btn_up</obj_property>
+      <obj_property name="ObjectShortName">btn_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/data" type="logic">
+      <obj_property name="ElementShortName">data</obj_property>
+      <obj_property name="ObjectShortName">data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/switch" type="array">
+      <obj_property name="ElementShortName">switch[0:0]</obj_property>
+      <obj_property name="ObjectShortName">switch[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/LEDs" type="array">
+      <obj_property name="ElementShortName">LEDs[9:0]</obj_property>
+      <obj_property name="ObjectShortName">LEDs[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/key" type="array">
+      <obj_property name="ElementShortName">key[7:0]</obj_property>
+      <obj_property name="ObjectShortName">key[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/key_par" type="logic">
+      <obj_property name="ElementShortName">key_par</obj_property>
+      <obj_property name="ObjectShortName">key_par</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/break" type="array">
+      <obj_property name="ElementShortName">break[7:0]</obj_property>
+      <obj_property name="ObjectShortName">break[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/break_par" type="logic">
+      <obj_property name="ElementShortName">break_par</obj_property>
+      <obj_property name="ObjectShortName">break_par</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/curr_byte" type="array">
+      <obj_property name="ElementShortName">curr_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/prev_byte" type="array">
+      <obj_property name="ElementShortName">prev_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/spar" type="logic">
+      <obj_property name="ElementShortName">spar</obj_property>
+      <obj_property name="ObjectShortName">spar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/srd" type="logic">
+      <obj_property name="ElementShortName">srd</obj_property>
+      <obj_property name="ObjectShortName">srd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/srp" type="logic">
+      <obj_property name="ElementShortName">srp</obj_property>
+      <obj_property name="ObjectShortName">srp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/uut/srs" type="logic">
+      <obj_property name="ElementShortName">srs</obj_property>
+      <obj_property name="ObjectShortName">srs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ps2/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>
