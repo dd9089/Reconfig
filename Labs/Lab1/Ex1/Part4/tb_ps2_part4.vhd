@@ -9,20 +9,29 @@ architecture behavior of tb_ps2 is
 
 	-- Component Declaration for the Unit Under Test (UUT)
     -- TODO Fill this in
-
+    component ps2_keyboard is
+        port( PS2_CLK  : in  std_logic;
+              PS2_DATA : in  std_logic;
+		      BTN_UP   : in  std_logic;
+		      CLK_100MHz : in std_logic;
+		      SWITCH   : in  std_logic_vector (0 downto 0);
+              LEDS     : out std_logic_vector (9 downto 0));
+    end component;
+    
 	-- Inputs
 	signal	clk			    : std_logic:='1';
 	signal	clk_active      : std_logic:='0';
 	signal	btn_up			: std_logic:='1';
 	signal	data    		: std_logic:='1';
+	signal  clk_100Mhz      : std_logic:='0';
 	signal	switch   		: std_logic_vector (0 downto 0):=(others=>'0');
 
 	-- Outputs
-	signal	LEDs			: std_logic_vector (7 downto 0);
+	signal	LEDs			: std_logic_vector (9 downto 0);
 
 
 	-- clk period definitions
-	constant clk_period : time := 100 ns;
+	constant clk_period : time := 100 us;
     constant key        : std_logic_vector(7 downto 0) := X"15";
     constant key_par    : std_logic                    :=   '0';
     constant break      : std_logic_vector(7 downto 0) := X"F0";
@@ -32,8 +41,17 @@ begin
 
     -- Component Instantiation
     -- TODO Instantiate it
-
+    uut : ps2_keyboard
+        port map (
+            PS2_CLk    => clk,
+            PS2_DATA   => data,
+            BTN_UP     => btn_up,
+            CLK_100MHz => clk_100MHz,
+            SWITCH     => switch,
+            LEDS       => LEDs); 
+    
     clk <= not clk after clk_period/2 when clk_active = '1';
+    clk_100MHz <= not clk_100MHz after 5 ns;
 
 	-- Stimulus process
 	process

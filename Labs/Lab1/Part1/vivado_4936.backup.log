@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Sep 21 23:22:24 2026
+# Process ID: 4936
+# Current directory: C:/Users/DIEGO/Documents/Reconfig/Labs/Lab1/Part1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11288 C:\Users\DIEGO\Documents\Reconfig\Labs\Lab1\Part1\Lab1_P1.xpr
+# Log file: C:/Users/DIEGO/Documents/Reconfig/Labs/Lab1/Part1/vivado.log
+# Journal file: C:/Users/DIEGO/Documents/Reconfig/Labs/Lab1/Part1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/DIEGO/Documents/Reconfig/Labs/Lab1/Part1/Lab1_P1.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/DIEGO/Documents/Reconfig/Labs/Lab1/PS2Interface.xdc'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 730.617 ; gain = 104.801
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 21 23:23:07 2026...

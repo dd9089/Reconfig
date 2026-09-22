@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DIEGO/Documents/Reconfig/Labs/Lab1/Part3/Lab1_Part3.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DIEGO/Documents/Reconfig/Labs/Lab1/Part3/Lab1_Part3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clk_wiz_0_clk_wiz_0_clk_wiz'
+INFO: [VRFC 10-3107] analyzing entity 'clk_wiz_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DIEGO/Documents/Reconfig/Labs/Lab1/Part3/Lab1_Part3.srcs/sources_1/new/PS2_behv.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PS2_behv'
