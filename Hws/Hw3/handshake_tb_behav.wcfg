@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="handshake_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="handshake_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="260000000fs"></ZoomEndTime>
+      <Cursor1Time time="68440000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="147"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/handshake_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/send" type="logic">
+      <obj_property name="ElementShortName">send</obj_property>
+      <obj_property name="ObjectShortName">send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/recv" type="logic">
+      <obj_property name="ElementShortName">recv</obj_property>
+      <obj_property name="ObjectShortName">recv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/input_data" type="array">
+      <obj_property name="ElementShortName">input_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/output_data" type="array">
+      <obj_property name="ElementShortName">output_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">output_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/uut/prod/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">Prod_State</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/uut/req_o" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">req_o</obj_property>
+      <obj_property name="ObjectShortName">req_o</obj_property>
+      <obj_property name="label">Prod-Hybr_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/uut/ack" type="logic">
+      <obj_property name="ElementShortName">ack</obj_property>
+      <obj_property name="ObjectShortName">ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/uut/hybrid/hybrid_state" type="other">
+      <obj_property name="ElementShortName">hybrid_state</obj_property>
+      <obj_property name="ObjectShortName">hybrid_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/uut/req" type="logic">
+      <obj_property name="ElementShortName">req</obj_property>
+      <obj_property name="ObjectShortName">req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/uut/ack_i" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">ack_i</obj_property>
+      <obj_property name="ObjectShortName">ack_i</obj_property>
+      <obj_property name="label">Hybr-Cons_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/uut/cons/current_state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+      <obj_property name="label">Cons_State</obj_property>
+   </wvobject>
+   <wvobject fp_name="/handshake_tb/uut/hybrid/o_data" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_data[7:0]</obj_property>
+      <obj_property name="label">Internal_o_data</obj_property>
+   </wvobject>
+</wave_config>

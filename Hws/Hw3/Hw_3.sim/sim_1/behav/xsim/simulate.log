@@ -1,0 +1,5 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Failure: Simulation Finished
+Time: 260 ns  Iteration: 0  Process: /handshake_tb/stim_proc  File: C:/Users/diego/Documents/Reconfig/Hws/Hw3/Hw_3.srcs/sim_1/new/handshake_tb.vhd
+$finish called at time : 260 ns : File "C:/Users/diego/Documents/Reconfig/Hws/Hw3/Hw_3.srcs/sim_1/new/handshake_tb.vhd" Line 63
