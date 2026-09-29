@@ -1,0 +1,371 @@
+
+*** Running vivado
+    with args -log axi_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_top.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source axi_top.tcl -notrace
+Command: synth_design -top axi_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12848 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 753.211 ; gain = 178.145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'axi_top' [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:15]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:101]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:102]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:103]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:104]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:105]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:106]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:107]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:108]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:109]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:110]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:111]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:112]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:113]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:114]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:115]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:116]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:117]
+INFO: [Synth 8-3491] module 'axi_gpio_0' declared at 'C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.runs/synth_1/.Xil/Vivado-2484-Pacheco/realtime/axi_gpio_0_stub.vhdl:5' bound to instance 'axi_gpio_inst_0' of component 'axi_gpio_0' [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio_0' [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.runs/synth_1/.Xil/Vivado-2484-Pacheco/realtime/axi_gpio_0_stub.vhdl:32]
+	Parameter C_M_TARGET_SLAVE_BASE_ADDR bound to: 9'b000000000 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'rd_ctrl' declared at 'C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/rd_ctrl.vhd:12' bound to instance 'rd_ctrl_0' of component 'rd_ctrl' [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'rd_ctrl' [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/rd_ctrl.vhd:58]
+	Parameter C_M_TARGET_SLAVE_BASE_ADDR bound to: 9'b000000000 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rd_ctrl' (1#1) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/rd_ctrl.vhd:58]
+	Parameter C_M_TARGET_SLAVE_BASE_ADDR bound to: 9'b000000000 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'wr_ctrl' declared at 'C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/wr_ctrl.vhd:11' bound to instance 'wr_ctrl_0' of component 'wr_ctrl' [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'wr_ctrl' [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/wr_ctrl.vhd:67]
+	Parameter C_M_TARGET_SLAVE_BASE_ADDR bound to: 9'b000000000 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'wr_ctrl' (2#1) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/wr_ctrl.vhd:67]
+INFO: [Synth 8-226] default block is never used [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:250]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'wr_ctrl_0'. This will prevent further optimization [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:192]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rd_ctrl_0'. This will prevent further optimization [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:170]
+INFO: [Synth 8-256] done synthesizing module 'axi_top' (3#1) [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/new/axi_top.vhd:15]
+WARNING: [Synth 8-3331] design wr_ctrl has unconnected port m_axi_bresp[1]
+WARNING: [Synth 8-3331] design wr_ctrl has unconnected port m_axi_bresp[0]
+WARNING: [Synth 8-3331] design rd_ctrl has unconnected port m_axi_rresp[1]
+WARNING: [Synth 8-3331] design rd_ctrl has unconnected port m_axi_rresp[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 817.738 ; gain = 242.672
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 817.738 ; gain = 242.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 817.738 ; gain = 242.672
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/ip/axi_gpio_0/axi_gpio_0/axi_gpio_0_in_context.xdc] for cell 'axi_gpio_inst_0'
+Finished Parsing XDC File [c:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/sources_1/ip/axi_gpio_0/axi_gpio_0/axi_gpio_0_in_context.xdc] for cell 'axi_gpio_inst_0'
+Parsing XDC File [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/constrs_1/new/Nexys4.xdc]
+Finished Parsing XDC File [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/constrs_1/new/Nexys4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.srcs/constrs_1/new/Nexys4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/axi_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/axi_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 929.762 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 929.762 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 929.762 ; gain = 354.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 929.762 ; gain = 354.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for axi_gpio_inst_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 929.762 ; gain = 354.695
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_rd_reg' in module 'axi_top'
+INFO: [Synth 8-802] inferred FSM for state register 'state_wr_reg' in module 'axi_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_w |                               00 |                               00
+             start_write |                               01 |                               01
+              wait_write |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_wr_reg' using encoding 'sequential' in module 'axi_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_r |                               00 |                               00
+              start_read |                               01 |                               01
+               wait_read |                               10 |                               10
+              store_read |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_rd_reg' using encoding 'sequential' in module 'axi_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 929.762 ; gain = 354.695
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axi_top 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module rd_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module wr_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design wr_ctrl has unconnected port m_axi_bresp[1]
+WARNING: [Synth 8-3331] design wr_ctrl has unconnected port m_axi_bresp[0]
+WARNING: [Synth 8-3331] design rd_ctrl has unconnected port m_axi_rresp[1]
+WARNING: [Synth 8-3331] design rd_ctrl has unconnected port m_axi_rresp[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 929.762 ; gain = 354.695
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 929.762 ; gain = 354.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 929.762 ; gain = 354.695
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 929.762 ; gain = 354.695
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 937.445 ; gain = 362.379
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 937.445 ; gain = 362.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 937.445 ; gain = 362.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 937.445 ; gain = 362.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 937.445 ; gain = 362.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 937.445 ; gain = 362.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |axi_gpio_0    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |axi_gpio_0_bbox_0 |     1|
+|2     |BUFG              |     1|
+|3     |LUT1              |     1|
+|4     |LUT2              |     4|
+|5     |LUT3              |     7|
+|6     |LUT4              |     3|
+|7     |LUT5              |     1|
+|8     |FDRE              |    96|
+|9     |IBUF              |    19|
+|10    |OBUF              |    16|
++------+------------------+------+
+
+Report Instance Areas: 
++------+------------+--------+------+
+|      |Instance    |Module  |Cells |
++------+------------+--------+------+
+|1     |top         |        |   205|
+|2     |  rd_ctrl_0 |rd_ctrl |    14|
+|3     |  wr_ctrl_0 |wr_ctrl |    49|
++------+------------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 937.445 ; gain = 362.379
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 937.445 ; gain = 250.355
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 937.445 ; gain = 362.379
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 954.492 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 954.492 ; gain = 638.820
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 954.492 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/diego/Documents/Reconfig/Tutorials/Tutorial3/AXITut.runs/synth_1/axi_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file axi_top_utilization_synth.rpt -pb axi_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 29 00:33:00 2026...

@@ -15,6 +15,31 @@ end axi_top;
 architecture Behavioral of axi_top is
 
     -- AXI GPIO Component
+    COMPONENT axi_gpio_0
+      PORT (
+        s_axi_aclk : IN STD_LOGIC;
+        s_axi_aresetn : IN STD_LOGIC;
+        s_axi_awaddr : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+        s_axi_awvalid : IN STD_LOGIC;
+        s_axi_awready : OUT STD_LOGIC;
+        s_axi_wdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+        s_axi_wstrb : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+        s_axi_wvalid : IN STD_LOGIC;
+        s_axi_wready : OUT STD_LOGIC;
+        s_axi_bresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+        s_axi_bvalid : OUT STD_LOGIC;
+        s_axi_bready : IN STD_LOGIC;
+        s_axi_araddr : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+        s_axi_arvalid : IN STD_LOGIC;
+        s_axi_arready : OUT STD_LOGIC;
+        s_axi_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+        s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+        s_axi_rvalid : OUT STD_LOGIC;
+        s_axi_rready : IN STD_LOGIC;
+        gpio_io_i : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        gpio2_io_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+      );
+    END COMPONENT;
 
     component rd_ctrl is
         generic (
@@ -116,6 +141,30 @@ architecture Behavioral of axi_top is
 begin
 
     -- AXI GPIO Instantiation
+    axi_gpio_inst_0 : axi_gpio_0
+      PORT MAP (
+        s_axi_aclk => CLK_100MHZ,
+        s_axi_aresetn => s_axi_aresetn,
+        s_axi_awaddr => s_axi_awaddr,
+        s_axi_awvalid => s_axi_awvalid,
+        s_axi_awready => s_axi_awready,
+        s_axi_wdata => s_axi_wdata,
+        s_axi_wstrb => s_axi_wstrb,
+        s_axi_wvalid => s_axi_wvalid,
+        s_axi_wready => s_axi_wready,
+        s_axi_bresp => s_axi_bresp,
+        s_axi_bvalid => s_axi_bvalid,
+        s_axi_bready => s_axi_bready,
+        s_axi_araddr => s_axi_araddr,
+        s_axi_arvalid => s_axi_arvalid,
+        s_axi_arready => s_axi_arready,
+        s_axi_rdata => s_axi_rdata,
+        s_axi_rresp => s_axi_rresp,
+        s_axi_rvalid => s_axi_rvalid,
+        s_axi_rready => s_axi_rready,
+        gpio_io_i => SWITCHES,
+        gpio2_io_o => LEDs
+      );
     
 
     rd_ctrl_0 : rd_ctrl
@@ -169,8 +218,8 @@ begin
 
     s_axi_aresetn <= not RST; -- Pressed button is 1, so invert for active low
 
-    rd_addr <= -- TODO
-    wr_addr <= -- TODO
+    rd_addr <= "000000000";
+    wr_addr <= "000001000";
 
     
     process(CLK_100MHZ)                                                          
