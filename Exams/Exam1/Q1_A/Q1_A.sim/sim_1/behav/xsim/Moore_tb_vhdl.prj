@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Q1_A.srcs/sources_1/new/Combinational_Output.vhd" \
+"../../../../Q1_A.srcs/sources_1/new/Registered_Output.vhd" \
+"../../../../Q1_A.srcs/sim_1/new/handshake_tb.vhd" \
+
+# Do not sort compile order
+nosort
