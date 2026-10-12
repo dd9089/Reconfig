@@ -7,8 +7,7 @@ clc
 delete(instrfind);
 
 % Create a serial port object
-serialPort = serial('/dev/ttyUSB1', 'BaudRate', 115200, 'DataBits', 8, 'Parity', 'none',
-'StopBit', 1, 'InputBufferSize', 3, 'OutputBufferSize', 3);
+serialPort = serial('COM3', 'BaudRate', 115200, 'DataBits', 8, 'Parity', 'none','StopBit', 1, 'InputBufferSize', 3, 'OutputBufferSize', 3);
 % TODO Modify InputBufferSize and OutputBufferSize to match, or be larger than the data.
 % They control how much data Matlab will buffer before sending to (or receiving from)
 % the UART
