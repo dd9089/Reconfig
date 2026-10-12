@@ -1,0 +1,41 @@
+#!/bin/bash
+####################################################################
+# Name    : matlab-fix.sh
+# Date    : 10/5/2022
+# Author  : Matthew Krebs <mlk6450@rit.edu>
+# Purpose : 
+#           Should be run a single time to enable the use of serial
+#           communication within Matlab on user accouts without root 
+#           access. Works through use of the lockdev-redirect
+#           GitHub project by rewriting any paths in the lock directory 
+#           to a different user-accessible location
+####################################################################
+DIR=~/CMPE660-matlab-fix
+
+# Safeguard to prevent installtion if the installtion directory already exists
+if [ -d $DIR ]
+then
+  echo "Warning: Directory ${DIR} already exists."
+  echo "  This implies the fix is already installed"
+  echo "  Please delete ${DIR} if you wish to do a fresh install"
+  exit
+fi
+
+# Safeguard to prevent installtion if the alias in the ~/.bashrc already exists
+if [[ -n $(grep "alias matlab" ~/.bashrc) ]]
+then
+  echo "Warning: Matlab alias already exists."
+  echo "  This implies the fix is already installed"
+  echo "  Please delete the following line from ~/.bashrc if you want to do a fresh install"
+  echo "  \"$(grep 'alias matlab' ~/.bashrc)\""
+  exit
+fi
+
+# Installation Script
+mkdir ${DIR}
+pushd ${DIR}
+git clone https://github.com/M-Reimer/lockdev-redirect
+cd lockdev-redirect
+make
+popd
+echo "alias matlab=\"XDG_RUNTIME_DIR=~/.cache LD_PRELOAD=$LD_PRELOAD:${DIR}/lockdev-redirect/lockdev-redirect.so matlab\"" >> ~/.bashrc  
