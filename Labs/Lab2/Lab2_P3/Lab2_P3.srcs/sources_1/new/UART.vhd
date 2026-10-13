@@ -124,10 +124,10 @@ begin
         s_axis_tvalid => rx_tvalid,
         s_axis_tready => rx_tready,
         s_axis_tdata =>  rx_tdata,
-        m_axis_tvalid => rx_tvalid,
-        m_axis_tready => rx_tready,
+        m_axis_tvalid => mid_tvalid,
+        m_axis_tready => mid_tready,
         m_axis_tdata => mid_tdata,
-        almost_empty => tx_almost_empty,
+        almost_empty => open,
         almost_full => rx_almost_full
   );
 
@@ -141,7 +141,7 @@ begin
         m_axis_tready => tx_tready,
         m_axis_tdata => tx_tdata,
         almost_empty => tx_almost_empty,
-        almost_full => rx_almost_full
+        almost_full => open
   );
 
     -- clock enable according to the required baud value
