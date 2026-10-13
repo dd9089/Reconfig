@@ -27,3 +27,4 @@ fprintf(serialPort,'%c','c');
 
 %close the serial port
 fclose(serialPort);
+a

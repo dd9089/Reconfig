@@ -15,8 +15,7 @@ imgSize = numRows * numCols;
 delete(instrfind);
 
 % Create a serial port object
-serialPort = serial('/dev/ttyUSB1', 'BaudRate', 115200, 'DataBits', 8, 'Parity', 'none',
-'StopBit', 1, 'OutputBufferSize', imgSize, 'InputBufferSize', imgSize);
+serialPort = serial('COM3', 'BaudRate', 115200, 'DataBits', 8, 'Parity', 'none','StopBit', 1, 'OutputBufferSize', imgSize, 'InputBufferSize', imgSize);
 
 % open the serial port for reading/writing
 fopen(serialPort);
