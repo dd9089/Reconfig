@@ -32,22 +32,26 @@ entity UART is
 end UART;
 
 architecture RTL of UART is
-    component MLUART_RX is
-        port ( CLK_100MHZ         : in std_logic;
-               clk_en_16_x_baud   : in std_logic;
-               read_data_complete : out std_logic;
-               data_out           : out std_logic_vector(7 downto 0);
-               UART_RX            : in std_logic);
+    component AXIS_UART_RX is
+        port ( 
+            UART_RX           : in std_logic;
+            almost_full       : in std_logic;
+            CLK_100MHZ        : in std_logic;
+            sclk_en_16_x_baud : in std_logic;
+            ready             : in std_logic;
+            valid             : out std_logic;
+            data_out          : out std_logic_vector (7 downto 0));
     end component;
     
-    component MLUART_TX is
-        port(
-            CLK_100MHZ          : in std_logic;
-            clk_en              : in std_logic;
-            data_in             : in std_logic_vector (7 downto 0);
-            send_data           : in std_logic;
-            UART_TX             : out std_logic;
-            send_data_complete  : out std_logic );
+    component AXIS_UART_TX is
+       Port (
+            data_in : in std_logic_vector (7 downto 0);
+            almost_empty      : in std_logic;
+            CLK_100MHZ        : in std_logic;
+            sclk_en_16_x_baud : in std_logic;
+            valid             : in std_logic;
+            ready             : out std_logic;
+            UART_TX           : out std_logic );
     end component;
     
     COMPONENT axis_data_fifo_0
@@ -67,14 +71,7 @@ architecture RTL of UART is
 
     signal scount12 : unsigned (11 downto 0) := (others => '0');
     signal sclk_en_16_x_baud : std_logic := '0';
-
-    signal read_data : std_logic_vector(7 downto 0);
-    signal read_data_complete : std_logic;
-    
-    signal send_data_complete : std_logic;
-    signal send_data : std_logic := '0';
-    signal tx_data   : std_logic_vector (7 downto 0) := (others => '0');
-    
+        
     signal aresetn : std_logic;
     
     signal rx_tdata: std_logic_vector (7 downto 0);
@@ -89,34 +86,25 @@ architecture RTL of UART is
 begin
     aresetn <= not BTN_UP;
 
-    process(CLK_100MHZ)
-    begin
-        if CLK_100MHZ'event and CLK_100MHZ = '1' then
-            send_data <= '0';
-            if sclk_en_16_x_baud = '1' then
-                if read_data_complete = '1' then
-                    LEDS <= read_data;
-                    tx_data <= read_data;
-                    send_data <= '1';
-                end if;
-            end if;
-        end if;
-    end process;
-
-    RX_inst : MLUART_RX port map
-    ( CLK_100MHZ         => CLK_100MHZ,
-      clk_en_16_x_baud   => sclk_en_16_x_baud,
-      read_data_complete => read_data_complete,
-      data_out           => read_data,
-      UART_RX            => UART_RX);
+    RX_inst : AXIS_UART_RX port map
+    ( 
+        UART_RX             => UART_RX,      
+        almost_full         => rx_almost_full,
+        CLK_100MHZ          => CLK_100MHZ,   
+        sclk_en_16_x_baud   => sclk_en_16_x_baud,
+        ready               => rx_tready,      
+        valid               => rx_tvalid,         
+        data_out            => rx_tdata);
       
-    TX_inst : MLUART_TX port map
-    ( CLK_100MHZ         => CLK_100MHZ,
-      clk_en             => sclk_en_16_x_baud,
-      send_data_complete => send_data_complete,
-      data_in            => tx_data,
-      send_data          => send_data,
-      UART_TX            => UART_TX);
+    TX_inst : AXIS_UART_TX port map
+    (
+        CLK_100MHZ          => CLK_100MHZ,
+        sclk_en_16_x_baud   => sclk_en_16_x_baud,
+        data_in             => tx_tdata,
+        valid               => tx_tvalid,
+        UART_TX             => UART_TX,
+        ready               => tx_tready,
+        almost_empty        => tx_almost_empty);
 
     AXIS_FIFO_RX : axis_data_fifo_0 PORT MAP 
     (   s_axis_aresetn => aresetn,
@@ -143,6 +131,15 @@ begin
         almost_empty => tx_almost_empty,
         almost_full => open
   );
+  
+  process(CLK_100MHZ)
+    begin
+        if CLK_100MHZ'event and CLK_100MHZ = '1' then
+            if rx_tvalid = '1' and rx_tready = '1' then
+                LEDS <= rx_tdata;
+            end if;
+        end if;
+    end process;
 
     -- clock enable according to the required baud value
     process(CLK_100MHZ)

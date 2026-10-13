@@ -1,0 +1,98 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Oct 13 14:35:07 2026
+| Host         : Pacheco running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file UART_control_sets_placed.rpt
+| Design       : UART
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    46 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     7 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              25 |           13 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              33 |           13 |
+| Yes          | No                    | No                     |              63 |           18 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             137 |           37 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+--------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+
+|      Clock Signal     |                                                       Enable Signal                                                      |                                     Set/Reset Signal                                     | Slice Load Count | Bel Load Count |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+
+|  CLK_100MHZ_IBUF_BUFG | RX_inst/RX_inst/E[0]                                                                                                     | TX_inst/TX_inst/scount4[3]_i_1_n_0                                                       |                1 |              2 |
+|  CLK_100MHZ_IBUF_BUFG |                                                                                                                          | AXIS_FIFO_RX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/rst_i |                1 |              3 |
+|  CLK_100MHZ_IBUF_BUFG |                                                                                                                          | AXIS_FIFO_TX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/rst_i |                1 |              3 |
+|  CLK_100MHZ_IBUF_BUFG | TX_inst/TX_inst/FSM_sequential_sstateTX[3]_i_1_n_0                                                                       |                                                                                          |                1 |              4 |
+|  CLK_100MHZ_IBUF_BUFG |                                                                                                                          | AXIS_FIFO_TX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                3 |              7 |
+|  CLK_100MHZ_IBUF_BUFG | RX_inst/RX_inst/E[0]                                                                                                     |                                                                                          |                2 |              7 |
+|  TX_inst/send_data    |                                                                                                                          |                                                                                          |                4 |              8 |
+|  CLK_100MHZ_IBUF_BUFG |                                                                                                                          | AXIS_FIFO_RX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                4 |              8 |
+|  CLK_100MHZ_IBUF_BUFG | RX_inst/RX_inst/sdata_out[7]_i_1_n_0                                                                                     |                                                                                          |                1 |              8 |
+|  CLK_100MHZ_IBUF_BUFG | RX_inst/RX_inst/sdata_read[7]_i_1_n_0                                                                                    |                                                                                          |                2 |              8 |
+|  CLK_100MHZ_IBUF_BUFG | RX_inst/RX_inst/FSM_onehot_sstateRX_reg[11]_0[0]                                                                         |                                                                                          |                1 |              8 |
+|  CLK_100MHZ_IBUF_BUFG | RX_inst/E[0]                                                                                                             |                                                                                          |                4 |              8 |
+|  CLK_100MHZ_IBUF_BUFG | TX_inst/tx_data[7]_i_1_n_0                                                                                               |                                                                                          |                3 |              8 |
+|  CLK_100MHZ_IBUF_BUFG |                                                                                                                          | RX_inst/RX_inst/E[0]                                                                     |                4 |             12 |
+|  CLK_100MHZ_IBUF_BUFG | RX_inst/RX_inst/FSM_onehot_sstateRX[11]_i_1_n_0                                                                          |                                                                                          |                4 |             12 |
+|  CLK_100MHZ_IBUF_BUFG |                                                                                                                          |                                                                                          |                9 |             17 |
+|  CLK_100MHZ_IBUF_BUFG | AXIS_FIFO_RX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1] | AXIS_FIFO_RX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                8 |             30 |
+|  CLK_100MHZ_IBUF_BUFG | AXIS_FIFO_TX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1] | AXIS_FIFO_TX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                8 |             30 |
+|  CLK_100MHZ_IBUF_BUFG | AXIS_FIFO_TX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0]                                  | AXIS_FIFO_TX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                8 |             30 |
+|  CLK_100MHZ_IBUF_BUFG | AXIS_FIFO_RX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0]                                  | AXIS_FIFO_RX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |               12 |             45 |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+
+
+

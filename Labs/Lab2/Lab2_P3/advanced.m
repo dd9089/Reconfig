@@ -4,7 +4,7 @@ clear all
 clc
 
 % Read image
-filename = 'Lena.pgm';
+filename = 'Images\feep.pgm';
 im_orig = imread(filename);
 im_orig_info = imfinfo(filename);
 numRows = im_orig_info.Height;

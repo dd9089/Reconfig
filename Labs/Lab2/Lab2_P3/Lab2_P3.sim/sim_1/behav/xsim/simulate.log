@@ -1,0 +1,9 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. TB.uut.AXIS_FIFO_RX.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /TB/uut/AXIS_FIFO_RX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial290_28  File: /wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. TB.uut.AXIS_FIFO_TX.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /TB/uut/AXIS_FIFO_TX/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial290_28  File: /wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv
+Failure: End of simulation
+Time: 567840 ns  Iteration: 0  Process: /TB/stim_proc  File: C:/Users/diego/Documents/Reconfig/Labs/Lab2/Lab2_P3/Lab2_P3.srcs/sim_1/new/tb.vhd
+$finish called at time : 567840 ns : File "C:/Users/diego/Documents/Reconfig/Labs/Lab2/Lab2_P3/Lab2_P3.srcs/sim_1/new/tb.vhd" Line 107

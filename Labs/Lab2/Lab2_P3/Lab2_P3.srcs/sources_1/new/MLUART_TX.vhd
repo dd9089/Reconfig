@@ -97,9 +97,8 @@ begin
                         end if;
                     when tstop => 
                         if scount4 = X"F" then
-                            sstateTX <= write_strobe;
+                            sstateTX <= idle;
                         end if;
-                    when write_strobe => sstateTX <= idle;
                     when others => sstateTX <= idle;
                 end case;
            end if;
@@ -115,12 +114,13 @@ begin
     end process;
     
     -- State Machine Output
-    process (sstateTX) 
+    process (sstateTX, scount4, clk_en) 
     begin
-        case sstateTX is
-            when write_strobe => send_data_complete <= '1';
-            when others       => send_data_complete <= '0';
-        end case;
+        if sstateTX = tstop and scount4 = X"F" and clk_en = '1' then
+            send_data_complete <= '1';
+        else 
+            send_data_complete <= '0';
+        end if;
     end process;
     
     --Datapath

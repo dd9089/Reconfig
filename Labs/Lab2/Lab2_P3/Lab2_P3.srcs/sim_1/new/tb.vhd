@@ -85,8 +85,22 @@ BEGIN
             UART_RX <= DATA(i);
             wait for CLK_16xbaud;
         end loop;
+ 
+        DATA <= B"0_10000010_1";
+        wait for 0 ns;
+        for i in DATA'range loop
+            UART_RX <= DATA(i);
+            wait for CLK_16xbaud;
+        end loop;
 
-        wait for 200 us;
+        DATA <= B"0_01000101_1";
+        wait for 0 ns;
+        for i in DATA'range loop
+            UART_RX <= DATA(i);
+            wait for CLK_16xbaud;
+        end loop;
+        
+        wait for 300 us;
 
         assert false
         report "End of simulation"
