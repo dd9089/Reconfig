@@ -109,8 +109,8 @@ architecture behavioral of top is
     
     signal tx_tdata : std_logic_vector (7 downto 0);
     signal tx_tvalid, tx_tready, tx_almost_empty : std_logic;
-    
-    signal s_bready : std_logic := '1';
+       
+    signal tdata    : std_logic_vector (7 downto 0) := (others => '0');
 
 begin
     RX_inst : AXIS_UART_RX port map
@@ -221,14 +221,14 @@ begin
     end process;
     
     -- Write counter
-    process (s_bready, clk)
+    process (clk)
     begin
         if Rising_edge(clk) then
             if rst = '1' then
-                scount4 <= x"0";
-            elsif s_bready = '0' then
+                scount4 <= (others => '0');
+            elsif  translator_state = bresp and m_axi_bvalid = '1' then
                 if scount4 = x"3" then
-                    scount4 <= x"0";
+                    scount4 <= (others => '0');
                 else
                     scount4 <= scount4 + 1;
                 end if;
@@ -237,22 +237,117 @@ begin
     end process;
     
     -- Read counter
-    process (transmit_tready, clk)
+    process (clk)
     begin
         if Rising_edge(clk) then
             if rst = '1' then
-                rcount4 <= x"0";
-            elsif transmit_tready = '1' then
+                rcount4 <= (others => '0');
+            elsif translator_state = send and transmit_tready = '1' then
                 if rcount4 = x"3" then
-                    rcount4 <= x"0";
+                    rcount4 <= (others => '0');
                 else
                     rcount4 <= rcount4 + 1;
                 end if;
             end if;
         end if;
     end process;
-
+    
+    --State machine output (m_axi_awvalid)
+    process (translator_state)
+    begin
+        case (translator_state) is
+            when write => m_axi_awvalid <= '1';
+            when others => m_axi_awvalid <= '0';
+        end case;
+    end process;
+    
+    --State machine output (m_axi_wvalid)
+    process (translator_state)
+    begin
+        case (translator_state) is
+            when write => m_axi_wvalid <= '1';
+            when others => m_axi_wvalid <= '0';
+        end case;
+    end process;
+    
+    --State machine output (m_axi_arvalid)
+    process (translator_state)
+    begin
+        case (translator_state) is
+            when read => m_axi_arvalid <= '1';
+            when others => m_axi_arvalid <= '0';
+        end case;
+    end process;
+    
+    --State machine output (transmit_tvalid)
+    process (translator_state)
+    begin
+        case (translator_state) is
+            when send => transmit_tvalid <= '1';
+            when others => transmit_tvalid <= '0';
+        end case;
+    end process;
+    
+    --State machine output (revieve_tready)
+    process (translator_state, recieve_tvalid)
+    begin
+        case (translator_state) is
+            when idle => 
+                if recieve_tvalid = '1' then
+                    recieve_tready <= '1';
+                else 
+                    recieve_tready <= '0';
+                end if;
+            when others => recieve_tready <= '0';
+        end case;
+    end process;
+    
+    --State machine output (Data)
+    process (clk)
+    begin
+        if Rising_edge(clk) then
+            if rst = '1' then
+                tdata <= (others => '0');
+            else
+                case (translator_state) is
+                    when idle => 
+                        if recieve_tvalid = '1' then
+                            tdata <= recieve_tdata;
+                        end if;
+                    when others => null;
+                end case;
+            end if;
+        end if;
+    end process;
+    
+    --State Machine Output (transmit_tdata)
+    process (clk)
+    begin
+        if Rising_edge(clk) then
+            case (translator_state) is
+                when data =>
+                    if m_axi_rvalid = '1' then
+                        transmit_tdata <= m_axi_rdata(7 downto 0);
+                    end if;
+                when others => null;
+            end case;
+        end if;
+    end process;
+    
+    m_axi_wdata <= x"000000" & tdata;
+    
+    m_axi_wstrb  <= "0001";
+    
+    m_axi_awaddr <= x"000000" & "00" & std_logic_vector(scount4) & "00";
+    
+    m_axi_araddr <= x"000000" & "00" & std_logic_vector(rcount4) & "00";
+    
+    m_axi_bready <= '1';
+    
+    m_axi_rready <= '1';
+    
     sclk_en_16_x_baud <= '1' when scount12 = X"36" else '0';
+    
     aresetn <= not rst;
 
 end behavioral;
