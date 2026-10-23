@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Oct 21 06:20:10 2026
+# Process ID: 23988
+# Current directory: C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.runs/axis_data_fifo_transmit_synth_1
+# Command line: vivado.exe -log axis_data_fifo_transmit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axis_data_fifo_transmit.tcl
+# Log file: C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.runs/axis_data_fifo_transmit_synth_1/axis_data_fifo_transmit.vds
+# Journal file: C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.runs/axis_data_fifo_transmit_synth_1\vivado.jou
+#-----------------------------------------------------------
+source axis_data_fifo_transmit.tcl -notrace
