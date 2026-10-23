@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Oct 23 00:06:00 2026
+# Process ID: 17592
+# Current directory: C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.runs/impl_1
+# Command line: vivado.exe -log fpga_top_BRAM.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source fpga_top_BRAM.tcl -notrace
+# Log file: C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.runs/impl_1/fpga_top_BRAM.vdi
+# Journal file: C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source fpga_top_BRAM.tcl -notrace
