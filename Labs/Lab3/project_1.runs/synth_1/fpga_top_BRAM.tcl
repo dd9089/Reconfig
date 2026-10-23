@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 4
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -56,6 +57,9 @@ set_property used_in_implementation false [get_files -all c:/Users/diego/Documen
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.srcs/constrs_1/new/Nexys4.xdc
+set_property used_in_implementation false [get_files C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.srcs/constrs_1/new/Nexys4.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

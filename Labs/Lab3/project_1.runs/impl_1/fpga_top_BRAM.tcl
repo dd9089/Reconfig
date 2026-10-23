@@ -79,6 +79,7 @@ set rc [catch {
   read_ip -quiet C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
   read_ip -quiet C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.srcs/sources_1/ip/axis_data_fifo_recieve/axis_data_fifo_recieve.xci
   read_ip -quiet C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.srcs/sources_1/ip/axis_data_fifo_transmit/axis_data_fifo_transmit.xci
+  read_xdc C:/Users/diego/Documents/Reconfig/Labs/Lab3/project_1.srcs/constrs_1/new/Nexys4.xdc
   link_design -top fpga_top_BRAM -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
