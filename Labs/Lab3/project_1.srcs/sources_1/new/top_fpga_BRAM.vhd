@@ -157,5 +157,7 @@ memory : blk_mem_gen_0
   );
   rst  <= sys_rst;
   rstn <= not rst;
+  
+  clk  <= clk_100MHz;
 
 end Behavioral;
