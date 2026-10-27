@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Lab3_P3.srcs/sources_1/new/AXIS_UART_RX.vhd" \
+"../../../../Lab3_P3.srcs/sources_1/new/AXIS_UART_TX.vhd" \
+"../../../../Lab3_P3.srcs/sources_1/new/MLUART_RX.vhd" \
+"../../../../Lab3_P3.srcs/sources_1/new/MLUART_TX.vhd" \
+"../../../../Lab3_P3.srcs/sources_1/new/top.vhd" \
+"../../../../Lab3_P3.srcs/sources_1/new/fpga_top_DDR2.vhd" \
+"../../../../Lab3_P3.srcs/sim_1/new/tb_fpga_top_DDR2.vhd" \
+
+# Do not sort compile order
+nosort

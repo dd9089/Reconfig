@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+237 true C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sim_1/new/tb_fpga_top_DDR2.vhd
