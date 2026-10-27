@@ -12,8 +12,8 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="680366733239fs"></ZoomEndTime>
-      <Cursor1Time time="1386445000000fs"></Cursor1Time>
+      <ZoomEndTime time="556382563452fs"></ZoomEndTime>
+      <Cursor1Time time="1387435000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="225"></NameColumnWidth>
@@ -36,18 +36,6 @@
       <obj_property name="ElementShortName">o_UART_TX</obj_property>
       <obj_property name="ObjectShortName">o_UART_TX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_fpga_top/clk_period" type="other">
-      <obj_property name="ElementShortName">clk_period</obj_property>
-      <obj_property name="ObjectShortName">clk_period</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fpga_top/clk_per_sym" type="other">
-      <obj_property name="ElementShortName">clk_per_sym</obj_property>
-      <obj_property name="ObjectShortName">clk_per_sym</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fpga_top/symbol_len" type="other">
-      <obj_property name="ElementShortName">symbol_len</obj_property>
-      <obj_property name="ObjectShortName">symbol_len</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_fpga_top/fpga_top_BRAM_0/top_0/tdata" type="array">
       <obj_property name="ElementShortName">tdata[7:0]</obj_property>
       <obj_property name="ObjectShortName">tdata[7:0]</obj_property>
@@ -67,5 +55,17 @@
    <wvobject fp_name="/tb_fpga_top/fpga_top_BRAM_0/memory/s_axi_rdata" type="array">
       <obj_property name="ElementShortName">s_axi_rdata[31:0]</obj_property>
       <obj_property name="ObjectShortName">s_axi_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top/symbol_len" type="other">
+      <obj_property name="ElementShortName">symbol_len</obj_property>
+      <obj_property name="ObjectShortName">symbol_len</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top/clk_per_sym" type="other">
+      <obj_property name="ElementShortName">clk_per_sym</obj_property>
+      <obj_property name="ObjectShortName">clk_per_sym</obj_property>
    </wvobject>
 </wave_config>

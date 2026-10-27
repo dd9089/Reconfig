@@ -1,0 +1,11 @@
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.gen/
+*.ip_user_files/
+.Xil/
+*.jou
+*.log
+*.wdb
+*.str

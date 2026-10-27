@@ -1,0 +1,14 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P1/project_1.srcs/sources_1/new/AXIS_UART_RX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXIS_UART_RX'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P1/project_1.srcs/sources_1/new/AXIS_UART_TX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXIS_UART_TX'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P1/project_1.srcs/sources_1/new/MLUART_RX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MLUART_RX'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P1/project_1.srcs/sources_1/new/MLUART_TX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MLUART_TX'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P1/project_1.srcs/sources_1/new/top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P1/project_1.srcs/sources_1/new/top_fpga_BRAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fpga_top_BRAM'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P1/project_1.srcs/sim_1/new/tb_top_fpga_BRAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fpga_top'

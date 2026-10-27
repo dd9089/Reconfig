@@ -87,9 +87,10 @@ architecture behavioral of top is
     END COMPONENT;
     
     type translator is (idle, write, bresp, read, data, send);
-    
     signal translator_state : translator;
 
+    constant n_bytes : integer := 4;
+    
     signal scount12 : unsigned (11 downto 0) := (others => '0');
     signal sclk_en_16_x_baud : std_logic := '0';
     
@@ -111,7 +112,10 @@ architecture behavioral of top is
     signal tx_tvalid, tx_tready, tx_almost_empty : std_logic;
        
     signal tdata    : std_logic_vector (7 downto 0) := (others => '0');
-
+    
+    signal aw_done  : std_logic := '0';
+    signal w_done   : std_logic := '0';
+    
 begin
     RX_inst : AXIS_UART_RX port map
     ( 
@@ -187,12 +191,12 @@ begin
                             translator_state <= write;
                         end if;
                     when write =>
-                        if m_axi_awready = '1' and m_axi_wready = '1' then
+                        if (aw_done = '1' or m_axi_awready = '1') and  (w_done = '1' or m_axi_wready = '1') then
                             translator_state <= bresp;
                         end if;
                     when bresp =>
                         if m_axi_bvalid = '1' then
-                            if scount4 = x"3" then
+                            if scount4 = to_unsigned(n_bytes - 1, scount4'length) then
                                 translator_state <= read;
                             else 
                                 translator_state <= idle;
@@ -208,7 +212,7 @@ begin
                         end if;
                     when send =>
                         if transmit_tready = '1' then
-                            if rcount4 = x"3" then
+                            if rcount4 = to_unsigned(n_bytes - 1, scount4'length) then
                                 translator_state <= idle;
                             else 
                                 translator_state <= read;
@@ -227,7 +231,7 @@ begin
             if rst = '1' then
                 scount4 <= (others => '0');
             elsif  translator_state = bresp and m_axi_bvalid = '1' then
-                if scount4 = x"3" then
+                if scount4 = to_unsigned(n_bytes - 1, scount4'length) then
                     scount4 <= (others => '0');
                 else
                     scount4 <= scount4 + 1;
@@ -243,7 +247,7 @@ begin
             if rst = '1' then
                 rcount4 <= (others => '0');
             elsif translator_state = send and transmit_tready = '1' then
-                if rcount4 = x"3" then
+                if rcount4 = to_unsigned(n_bytes - 1, scount4'length) then
                     rcount4 <= (others => '0');
                 else
                     rcount4 <= rcount4 + 1;
@@ -253,19 +257,29 @@ begin
     end process;
     
     --State machine output (m_axi_awvalid)
-    process (translator_state)
+    process (translator_state, aw_done)
     begin
         case (translator_state) is
-            when write => m_axi_awvalid <= '1';
+            when write => 
+                if (aw_done = '0') then
+                    m_axi_awvalid <= '1';
+                else
+                    m_axi_awvalid <= '0';
+                end if;
             when others => m_axi_awvalid <= '0';
         end case;
     end process;
     
     --State machine output (m_axi_wvalid)
-    process (translator_state)
+    process (translator_state, w_done)
     begin
         case (translator_state) is
-            when write => m_axi_wvalid <= '1';
+            when write =>
+                if (w_done = '0') then
+                    m_axi_wvalid <= '1';
+                else
+                    m_axi_wvalid <= '0';
+                end if;
             when others => m_axi_wvalid <= '0';
         end case;
     end process;
@@ -328,6 +342,38 @@ begin
                 when data =>
                     if m_axi_rvalid = '1' then
                         transmit_tdata <= m_axi_rdata(7 downto 0);
+                    end if;
+                when others => null;
+            end case;
+        end if;
+    end process;
+    
+    --State Machine Output (aw_done)
+    process (clk)
+    begin
+        if Rising_edge(clk) then
+            case (translator_state) is
+                when idle => 
+                    aw_done <= '0';
+                when write =>
+                    if (m_axi_awready = '1') then
+                        aw_done <= '1';
+                    end if;
+                when others => null;
+            end case;
+        end if;
+    end process;
+    
+    --State Machine Output (w_done)
+    process (clk)
+    begin
+        if Rising_edge(clk) then
+            case (translator_state) is
+                when idle =>
+                    w_done <= '0';
+                when write =>
+                    if (m_axi_wready = '1') then
+                        w_done <= '1';
                     end if;
                 when others => null;
             end case;

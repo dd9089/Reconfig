@@ -141,7 +141,7 @@ begin
                     end loop;
                 when "WAIT" =>
                     read(L_IN, n);
-                    for i in 1 to n loop
+                    for i_wait in 1 to n loop
                         wait until rising_edge(clk);
                     end loop;
                 
