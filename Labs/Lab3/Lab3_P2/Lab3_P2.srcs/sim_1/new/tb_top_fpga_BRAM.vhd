@@ -2,6 +2,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_TextIO.all;
+use STD.TextIO.all;
 
 entity tb_fpga_top is
 end tb_fpga_top;
@@ -49,7 +51,8 @@ begin
     -- Stimulus process
     process
         procedure send_char(
-            chr : in unsigned(7 downto 0)
+            chr  : in unsigned(7 downto 0);
+            last : in boolean := false
         ) is begin
             i_UART_RX <= '0';
             wait for symbol_len;
@@ -58,7 +61,9 @@ begin
                 wait for symbol_len;
             end loop;
             i_UART_RX <= '1';
-            wait for symbol_len;
+            if not last then
+                wait for symbol_len;
+            end if;
         end send_char;
 
         procedure rx_char(
@@ -79,33 +84,70 @@ begin
             wait for symbol_len/2;
         end rx_char;
         
-        variable v : integer;
+        type byte_array is array (0 to 15) of std_logic_vector (7 downto 0);
+        
+        variable bytes      : byte_array;
+        
+        variable v          : integer;
+        
+        variable n          : integer;
+        
+        variable L_IN       : line;
+        
+        variable L_OUT      : line;
+        
+        variable arg        : std_logic_vector (7 downto 0);
+        
+        variable command    : string(1 to 4);
+                
+        variable success    : boolean := true;
+        
+        file STIM_IN        : text open READ_MODE is "stim_in.txt";
+        file LOG_OUT        : text open WRITE_MODE is "recieved.txt";
     begin
         wait for 200 ns;
         sys_rst <= '0';
-        wait for 200 ns; -- wait for ui_clk_sync_rst
+        wait for 200 ns;
         
-        send_char(x"A2");
-        send_char(x"B4");
-        send_char(x"C5");
-         
-        i_UART_RX <= '0';
-        wait for symbol_len;
-        for i in 0 to 7 loop
-            i_UART_RX <= std_logic(to_unsigned(16#32#, 8)(i));
-            wait for symbol_len;
+        while not endfile (STIM_IN) loop
+            readline(STIM_IN, L_IN);
+            read(L_IN, command);
+            
+            case command is
+                when "TEST" =>
+                    n := 0;
+                    loop 
+                        hread(L_IN, arg, success);
+                        exit when not success;
+                        bytes(n) := arg;
+                        n := n + 1;                        
+                    end loop;
+                    
+                    for i in 0 to n-1 loop
+                        send_char(unsigned(bytes(i)), i = n-1);
+                    end loop;
+                    
+                    for i in 0 to n-1 loop
+                        rx_char(v);
+                        
+                        write (L_OUT, now);
+                        write (L_OUT, string'(" "));
+                        hwrite(L_OUT, std_logic_vector(to_unsigned(v, 8)));
+                        writeline(LOG_OUT, L_OUT);
+                        
+                        assert v = to_integer(unsigned(bytes(i)))
+                            report "Byte " & integer'image(i) & " is wrong Read " & integer'image(to_integer(unsigned(bytes(i))))
+                                severity failure;
+                    end loop;
+                when "WAIT" =>
+                    read(L_IN, n);
+                    for i in 1 to n loop
+                        wait until rising_edge(clk);
+                    end loop;
+                
+                when others => report "wrong command: " &command;
+            end case;
         end loop;
-        i_UART_RX <= '1';           -- stop bit (line stays high)
-
-        rx_char(v);
-        assert v = 16#A2# report "byte 0 wrong" severity error;
-        rx_char(v);
-        assert v = 16#B4# report "byte 1 wrong" severity error;
-        rx_char(v);
-        assert v = 16#C5# report "byte 2 wrong" severity error;
-        rx_char(v);
-        assert v = 16#32# report "byte 3 wrong" severity error;
-
         assert false
             report "End of simulation"
             severity failure;

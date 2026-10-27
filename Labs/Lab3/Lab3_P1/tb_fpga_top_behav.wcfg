@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="354103798343fs"></ZoomEndTime>
-      <Cursor1Time time="341655000000fs"></Cursor1Time>
+      <ZoomEndTime time="680366733239fs"></ZoomEndTime>
+      <Cursor1Time time="1386445000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="225"></NameColumnWidth>
-      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+      <ValueColumnWidth column_width="129"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="12" />
    <wvobject fp_name="/tb_fpga_top/clk" type="logic">
