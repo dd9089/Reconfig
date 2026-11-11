@@ -46,4 +46,10 @@ if isequal(im_orig, im_final)
     title('Received');
 else
     fprintf('FAILURE!\n');
+    subplot(1,2,1);
+    imshow(mat2gray(im_orig));
+    title('Original');
+    subplot(1,2,2);
+    imshow(mat2gray(im_final));
+    title('Received');
 end

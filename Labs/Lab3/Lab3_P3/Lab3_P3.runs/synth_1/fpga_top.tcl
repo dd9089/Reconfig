@@ -17,8 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 4
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -41,16 +40,16 @@ read_vhdl -library xil_defaultlib {
   C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/top.vhd
   C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/fpga_top_DDR2.vhd
 }
-read_ip -quiet c:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci
+read_ip -quiet C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
 
-read_ip -quiet c:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet c:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/axi_protocol_converter_0/axi_protocol_converter_0.xci
+read_ip -quiet C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/axi_protocol_converter_0/axi_protocol_converter_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/axi_protocol_converter_0/axi_protocol_converter_0_ooc.xdc]
 
 read_ip -quiet C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/axis_data_fifo_transmit/axis_data_fifo_transmit.xci

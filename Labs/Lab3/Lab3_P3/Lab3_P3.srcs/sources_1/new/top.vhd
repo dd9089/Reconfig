@@ -392,7 +392,7 @@ begin
     
     m_axi_rready <= '1';
     
-    sclk_en_16_x_baud <= '1' when scount12 = X"36" else '0';
+    sclk_en_16_x_baud <= '1' when scount12 = X"35" else '0';
     
     aresetn <= not rst;
 

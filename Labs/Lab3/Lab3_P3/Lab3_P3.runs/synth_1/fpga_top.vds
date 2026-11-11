@@ -2,36 +2,37 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Oct 27 02:19:04 2026
-# Process ID: 23876
+# Start of session at: Thu Oct 29 16:39:43 2026
+# Process ID: 25052
 # Current directory: C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1
 # Command line: vivado.exe -log fpga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_top.tcl
 # Log file: C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/fpga_top.vds
 # Journal file: C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source fpga_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 288.930 ; gain = 0.000
 Command: synth_design -top fpga_top -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4204 
+INFO: Helper process launched with PID 12732 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 772.598 ; gain = 178.562
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 772.629 ; gain = 178.875
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'fpga_top' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/fpga_top_DDR2.vhd:31]
 	Parameter depth bound to: 32 - type: integer 
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'axi_protocol_converter_0' declared at 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/axi_protocol_converter_0_stub.v:6' bound to instance 'axi_protocol_conv' of component 'axi_protocol_converter_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/fpga_top_DDR2.vhd:227]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/axi_protocol_converter_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_0' (1#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/axi_protocol_converter_0_stub.v:6]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk_wiz' of component 'clk_wiz_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/fpga_top_DDR2.vhd:287]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/mig_7series_0_stub.v:5' bound to instance 'mig_7series' of component 'mig_7series_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/fpga_top_DDR2.vhd:295]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/mig_7series_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_0' (3#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/mig_7series_0_stub.v:5]
+INFO: [Synth 8-3491] module 'axi_protocol_converter_0' declared at 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/axi_protocol_converter_0_stub.v:6' bound to instance 'axi_protocol_conv' of component 'axi_protocol_converter_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/fpga_top_DDR2.vhd:227]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/axi_protocol_converter_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_0' (1#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/axi_protocol_converter_0_stub.v:6]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk_wiz' of component 'clk_wiz_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/fpga_top_DDR2.vhd:287]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/mig_7series_0_stub.v:5' bound to instance 'mig_7series' of component 'mig_7series_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/fpga_top_DDR2.vhd:295]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_0' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/mig_7series_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_0' (3#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/mig_7series_0_stub.v:5]
 INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/top.vhd:35]
 	Parameter depth bound to: 32 - type: integer 
 	Parameter width bound to: 8 - type: integer 
@@ -48,12 +49,12 @@ INFO: [Synth 8-638] synthesizing module 'MLUART_TX' [C:/Users/diego/Documents/Re
 WARNING: [Synth 8-614] signal 'data_in' is read in the process but is not in the sensitivity list [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/MLUART_TX.vhd:109]
 INFO: [Synth 8-256] done synthesizing module 'MLUART_TX' (6#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/MLUART_TX.vhd:45]
 INFO: [Synth 8-256] done synthesizing module 'AXIS_UART_TX' (7#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/AXIS_UART_TX.vhd:45]
-INFO: [Synth 8-3491] module 'axis_data_fifo_recieve' declared at 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/axis_data_fifo_recieve_stub.v:6' bound to instance 'AXIS_FIFO_RX' of component 'axis_data_fifo_recieve' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/top.vhd:140]
-INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_recieve' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/axis_data_fifo_recieve_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_recieve' (8#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/axis_data_fifo_recieve_stub.v:6]
-INFO: [Synth 8-3491] module 'axis_data_fifo_transmit' declared at 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/axis_data_fifo_transmit_stub.v:6' bound to instance 'AXIS_FIFO_TX' of component 'axis_data_fifo_transmit' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/top.vhd:154]
-INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_transmit' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/axis_data_fifo_transmit_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_transmit' (9#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-23876-Pacheco/realtime/axis_data_fifo_transmit_stub.v:6]
+INFO: [Synth 8-3491] module 'axis_data_fifo_recieve' declared at 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/axis_data_fifo_recieve_stub.v:6' bound to instance 'AXIS_FIFO_RX' of component 'axis_data_fifo_recieve' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/top.vhd:140]
+INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_recieve' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/axis_data_fifo_recieve_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_recieve' (8#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/axis_data_fifo_recieve_stub.v:6]
+INFO: [Synth 8-3491] module 'axis_data_fifo_transmit' declared at 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/axis_data_fifo_transmit_stub.v:6' bound to instance 'AXIS_FIFO_TX' of component 'axis_data_fifo_transmit' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/top.vhd:154]
+INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_transmit' [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/axis_data_fifo_transmit_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_transmit' (9#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/.Xil/Vivado-25052-Pacheco/realtime/axis_data_fifo_transmit_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'top' (10#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/top.vhd:35]
 INFO: [Synth 8-256] done synthesizing module 'fpga_top' (11#1) [C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/new/fpga_top_DDR2.vhd:31]
 WARNING: [Synth 8-3331] design AXIS_UART_TX has unconnected port almost_empty
@@ -86,7 +87,7 @@ WARNING: [Synth 8-3331] design top has unconnected port m_axi_rdata[8]
 WARNING: [Synth 8-3331] design top has unconnected port m_axi_rresp[1]
 WARNING: [Synth 8-3331] design top has unconnected port m_axi_rresp[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 840.945 ; gain = 246.910
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 841.875 ; gain = 248.121
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -99,10 +100,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 840.945 ; gain = 246.910
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 841.875 ; gain = 248.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 840.945 ; gain = 246.910
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 841.875 ; gain = 248.121
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -141,21 +142,21 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/fpga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 953.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 958.859 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 953.719 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 958.859 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'axi_protocol_conv' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 955.707 ; gain = 361.672
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 961.848 ; gain = 368.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 955.707 ; gain = 361.672
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 961.848 ; gain = 368.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -260,7 +261,7 @@ Applied set_property DONT_TOUCH = true for axi_protocol_conv. (constraint file  
 Applied set_property DONT_TOUCH = true for top_0/AXIS_FIFO_TX. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for top_0/AXIS_FIFO_RX. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 955.707 ; gain = 361.672
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 961.848 ; gain = 368.094
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'sstateRX_reg' in module 'MLUART_RX'
 INFO: [Synth 8-802] inferred FSM for state register 'sstateTX_reg' in module 'MLUART_TX'
@@ -311,7 +312,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'sdata_reg' [C:/Users/diego/
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'translator_state_reg' using encoding 'one-hot' in module 'top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 955.707 ; gain = 361.672
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 961.848 ; gain = 368.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -419,7 +420,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 955.707 ; gain = 361.672
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 961.848 ; gain = 368.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -434,13 +435,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'mig_7series/ui_clk' to pi
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz/clk_out1' to pin 'clk_wiz/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 955.707 ; gain = 361.672
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 961.848 ; gain = 368.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 955.707 ; gain = 361.672
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 961.848 ; gain = 368.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -452,7 +453,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 955.707 ; gain = 361.672
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 961.848 ; gain = 368.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -476,7 +477,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 959.766 ; gain = 365.730
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 967.871 ; gain = 374.117
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -489,7 +490,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 959.766 ; gain = 365.730
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 967.871 ; gain = 374.117
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -501,25 +502,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 959.766 ; gain = 365.730
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 967.871 ; gain = 374.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 959.766 ; gain = 365.730
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 967.871 ; gain = 374.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 959.766 ; gain = 365.730
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 967.871 ; gain = 374.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 959.766 ; gain = 365.730
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 967.871 ; gain = 374.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -548,9 +549,9 @@ Report Cell Usage:
 |6     |CARRY4                   |     3|
 |7     |LUT1                     |     3|
 |8     |LUT2                     |     6|
-|9     |LUT3                     |     9|
-|10    |LUT4                     |    15|
-|11    |LUT5                     |     8|
+|9     |LUT3                     |    11|
+|10    |LUT4                     |    13|
+|11    |LUT5                     |    10|
 |12    |LUT6                     |    13|
 |13    |MUXF7                    |     1|
 |14    |FDRE                     |   100|
@@ -564,25 +565,25 @@ Report Instance Areas:
 +------+--------------+-------------+------+
 |      |Instance      |Module       |Cells |
 +------+--------------+-------------+------+
-|1     |top           |             |   474|
-|2     |  top_0       |top          |   190|
+|1     |top           |             |   476|
+|2     |  top_0       |top          |   192|
 |3     |    RX_inst   |AXIS_UART_RX |    58|
 |4     |      RX_inst |MLUART_RX    |    49|
-|5     |    TX_inst   |AXIS_UART_TX |    48|
-|6     |      TX_inst |MLUART_TX    |    36|
+|5     |    TX_inst   |AXIS_UART_TX |    49|
+|6     |      TX_inst |MLUART_TX    |    37|
 +------+--------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 959.766 ; gain = 365.730
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 967.871 ; gain = 374.117
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 959.766 ; gain = 250.969
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 959.766 ; gain = 365.730
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 967.871 ; gain = 254.145
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 967.871 ; gain = 374.117
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 984.305 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 979.781 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   LD => LDCE: 8 instances
@@ -590,10 +591,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 52 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 984.305 ; gain = 648.145
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 984.305 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:04 . Memory (MB): peak = 979.781 ; gain = 643.477
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 979.781 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.runs/synth_1/fpga_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file fpga_top_utilization_synth.rpt -pb fpga_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 27 02:19:38 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 16:41:21 2026...

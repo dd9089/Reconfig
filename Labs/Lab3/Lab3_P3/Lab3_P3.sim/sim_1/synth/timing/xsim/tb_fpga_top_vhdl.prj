@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Lab3_P3.srcs/sim_1/new/tb_fpga_top_DDR2.vhd" \
+
+# Do not sort compile order
+nosort
