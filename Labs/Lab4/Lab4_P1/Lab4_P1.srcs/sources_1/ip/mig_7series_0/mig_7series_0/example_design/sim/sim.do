@@ -76,8 +76,8 @@ vlib work
 
 #Compile all modules#
 vlog  -incr mig_7series*.v
-vlog  ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.v
-vlog  ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.v
+vcom  ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd
+vcom  ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.vhd
 vlog  -incr ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/*.v
 vlog  -incr ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/*.v
 vlog  -incr ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ecc/*.v
@@ -85,9 +85,9 @@ vlog  -incr ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/us
 vlog  -incr ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/*.v
 vlog  -incr ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ui/*.v
 vlog -incr ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/axi/*
+vcom  ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/*.vhd
 
-
-vlog  example_top.v
+vcom  example_top.vhd
 
 #Compile files in sim folder (excluding model parameter file)#
 #$XILINX variable must be set

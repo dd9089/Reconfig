@@ -74,8 +74,8 @@
 
 #Compile all modules#
 ncvlog -work worklib -sv -messages mig_7series*.v > ies_sim.log
-ncvlog -sv -work worklib -messages ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.v >> ies_sim.log
-ncvlog -sv -work worklib -messages ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.v >> ies_sim.log
+ncvhdl -v200x -work worklib -messages ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd >> ies_sim.log
+ncvhdl -v200x -work worklib -messages ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.vhd >> ies_sim.log
 ncvlog -work worklib -messages -sv ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/*.v >> ies_sim.log
 ncvlog -work worklib -messages -sv ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/*.v >> ies_sim.log
 ncvlog -work worklib -messages -sv ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ecc/*.v >> ies_sim.log
@@ -83,9 +83,9 @@ ncvlog -work worklib -messages -sv ../mig_7series_0_ex.srcs/sources_1/ip/mig_7se
 ncvlog -work worklib -messages -sv ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/*.v >> ies_sim.log
 ncvlog -work worklib -messages -sv ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ui/*.v >> ies_sim.log
 ncvlog -sv -work worklib -messages ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/axi/*.v >> ies_sim.log 
+ncvhdl -work worklib -messages -v200x ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/*.vhd >> ies_sim.log
 
-
-ncvlog -sv -work worklib -messages example_top.v >> ies_sim.log
+ncvhdl -v200x -work worklib -messages example_top.vhd >> ies_sim.log
 
 #Compile files in sim folder (excluding model parameter file)#
 #$XILINX variable must be set

@@ -22310,22 +22310,22 @@
   <spirit:model>
     <spirit:views>
       <spirit:view>
-        <spirit:name>xilinx_veriloginstantiationtemplate</spirit:name>
-        <spirit:displayName>Verilog Instantiation Template</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.template</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
+        <spirit:name>xilinx_vhdlinstantiationtemplate</spirit:name>
+        <spirit:displayName>VHDL Instantiation Template</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis.template</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
         <spirit:modelName>_dummy_mig_model</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_veriloginstantiationtemplate_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_vhdlinstantiationtemplate_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 27 03:10:12 UTC 2026</spirit:value>
+            <spirit:value>Wed Nov 18 18:10:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9502d77b</spirit:value>
+            <spirit:value>9:af438b37</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -22340,11 +22340,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 27 03:10:12 UTC 2026</spirit:value>
+            <spirit:value>Wed Nov 18 18:10:33 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9502d77b</spirit:value>
+            <spirit:value>9:af438b37</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -22355,27 +22355,27 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9502d77b</spirit:value>
+            <spirit:value>9:af438b37</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
-        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
-        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
+        <spirit:name>xilinx_vhdlsynthesiswrapper</spirit:name>
+        <spirit:displayName>VHDL Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
         <spirit:modelName>mig_7series_0</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 27 03:10:12 UTC 2026</spirit:value>
+            <spirit:value>Wed Nov 18 18:10:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9502d77b</spirit:value>
+            <spirit:value>9:af438b37</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -22391,31 +22391,31 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 27 03:10:12 UTC 2026</spirit:value>
+            <spirit:value>Wed Nov 18 18:10:34 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:31285c96</spirit:value>
+            <spirit:value>9:70b92cb8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
-        <spirit:name>xilinx_verilogsimulationwrapper</spirit:name>
-        <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
+        <spirit:name>xilinx_vhdlsimulationwrapper</spirit:name>
+        <spirit:displayName>VHDL Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
         <spirit:modelName>mig_7series_0</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_vhdlsimulationwrapper_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 27 03:10:12 UTC 2026</spirit:value>
+            <spirit:value>Wed Nov 18 18:10:35 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:31285c96</spirit:value>
+            <spirit:value>9:70b92cb8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -22430,11 +22430,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 27 03:10:12 UTC 2026</spirit:value>
+            <spirit:value>Wed Nov 18 18:10:33 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9502d77b</spirit:value>
+            <spirit:value>9:af438b37</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -22449,11 +22449,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 27 03:10:21 UTC 2026</spirit:value>
+            <spirit:value>Wed Nov 18 18:10:37 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9502d77b</spirit:value>
+            <spirit:value>9:af438b37</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -22466,12 +22466,8 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 27 03:12:20 UTC 2026</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9502d77b</spirit:value>
+            <spirit:value>9:af438b37</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -113663,150 +113659,14 @@
   </spirit:choices>
   <spirit:fileSets>
     <spirit:fileSet>
-      <spirit:name>xilinx_veriloginstantiationtemplate_view_fileset</spirit:name>
+      <spirit:name>xilinx_vhdlinstantiationtemplate_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>mig_7series_0.veo</spirit:name>
-        <spirit:userFileType>verilogTemplate</spirit:userFileType>
+        <spirit:name>mig_7series_0.vho</spirit:name>
+        <spirit:userFileType>vhdlTemplate</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_addr_decode.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_read.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_reg.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_reg_bank.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_top.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_write.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_ar_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_aw_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_b_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_arbiter.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_fsm.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_translator.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_fifo.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_incr_cmd.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_r_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_simple_fifo.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wrap_cmd.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wr_cmd_fsm.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_w_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axi_register_slice.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axi_upsizer.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_a_upsizer.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_and.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_latch_and.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_latch_or.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_or.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_command_fifo.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_comparator.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_comparator_sel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_comparator_sel_static.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_r_upsizer.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_w_upsizer.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
       <spirit:file>
         <spirit:name>mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
@@ -113901,10 +113761,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>mig_7series_0/user_design/rtl/ecc/mig_7series_v4_2_fi_xor.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -114004,10 +113860,6 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_top.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrcal.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -114062,6 +113914,10 @@
       <spirit:file>
         <spirit:name>mig_7series_0/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_top.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>mig_7series_0/user_design/constraints/mig_7series_0.xdc</spirit:name>
@@ -114087,154 +113943,18 @@
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/mig_7series_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:name>mig_7series_0/user_design/rtl/mig_7series_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/mig_7series_0_mig.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:name>mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_addr_decode.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_read.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_reg.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_reg_bank.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_top.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_write.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_ar_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_aw_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_b_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_arbiter.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_fsm.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_translator.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_fifo.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_incr_cmd.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_r_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_simple_fifo.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wrap_cmd.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wr_cmd_fsm.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_w_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axi_register_slice.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axi_upsizer.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_a_upsizer.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_and.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_latch_and.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_latch_or.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_or.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_command_fifo.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_comparator.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_comparator_sel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_comparator_sel_static.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_r_upsizer.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_ddr_w_upsizer.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
       <spirit:file>
         <spirit:name>mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
@@ -114329,10 +114049,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>mig_7series_0/user_design/rtl/ecc/mig_7series_v4_2_fi_xor.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -114432,10 +114148,6 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_top.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrcal.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -114491,16 +114203,20 @@
         <spirit:name>mig_7series_0/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
+      <spirit:file>
+        <spirit:name>mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_top.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
+      <spirit:name>xilinx_vhdlsimulationwrapper_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:name>mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>mig_7series_0/user_design/rtl/mig_7series_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:name>mig_7series_0/user_design/rtl/mig_7series_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>

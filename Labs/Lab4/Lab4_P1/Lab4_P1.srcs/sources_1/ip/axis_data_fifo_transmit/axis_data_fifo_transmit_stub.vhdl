@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Oct 27 02:15:24 2026
+-- Date        : Wed Nov 18 13:11:27 2026
 -- Host        : Pacheco running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/diego/Documents/Reconfig/Labs/Lab3/Lab3_P3/Lab3_P3.srcs/sources_1/ip/axis_data_fifo_transmit/axis_data_fifo_transmit_stub.vhdl
+--               C:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/axis_data_fifo_transmit/axis_data_fifo_transmit_stub.vhdl
 -- Design      : axis_data_fifo_transmit
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

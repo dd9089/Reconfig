@@ -72,8 +72,8 @@
 #libraries path#
 
 #Compile all modules#
-vlogan -sverilog ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.v > vcs_sim.log 
-vlogan -sverilog ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.v >> vcs_sim.log
+vhdlan ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd > vcs_sim.log 
+vhdlan ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.vhd >> vcs_sim.log
 vlogan -sverilog mig_7series*.v >> vcs_sim.log
 vlogan -sverilog ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/*.v >> vcs_sim.log
 vlogan -sverilog ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/*.v >> vcs_sim.log
@@ -83,9 +83,9 @@ vlogan -sverilog ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series
 vlogan -sverilog ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ui/*.v >> vcs_sim.log
 
 vlogan -sverilog ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/axi/*.v >> vcs_sim.log
+vhdlan ../mig_7series_0_ex.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/*.vhd >> vcs_sim.log
 
-
-vlogan -sverilog example_top.v >> vcs_sim.log
+vhdlan example_top.vhd >> vcs_sim.log
 
 #Compile files in sim folder (excluding model parameter file)#
 #$XILINX variable must be set
