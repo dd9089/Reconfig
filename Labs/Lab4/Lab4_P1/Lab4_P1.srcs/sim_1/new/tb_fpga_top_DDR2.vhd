@@ -192,7 +192,7 @@ begin
         
         variable size       : integer;
         
-        file PGM_IN         : text open READ_MODE is "feep.pgm";
+        file PGM_IN         : text open READ_MODE is "f.pgm";
         
         file PGM_OUT        : text open WRITE_MODE is "feep_out.pgm";
         

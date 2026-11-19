@@ -2,12 +2,12 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Nov 18 13:12:03 2026
-# Process ID: 14564
-# Current directory: C:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1
+# Start of session at: Wed Nov 18 23:10:58 2026
+# Process ID: 20588
+# Current directory: C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1
 # Command line: vivado.exe -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
-# Log file: C:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
-# Journal file: C:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1\vivado.jou
+# Log file: C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
+# Journal file: C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source clk_wiz_0.tcl -notrace
 Command: synth_design -top clk_wiz_0 -part xc7a100tcsg324-1 -mode out_of_context
@@ -16,20 +16,20 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25100 
+INFO: Helper process launched with PID 9204 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 753.375 ; gain = 177.730
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 753.703 ; gain = 177.926
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:70]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
-INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32856]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [D:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32856]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32856]
-INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39813]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [D:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32856]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [D:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39813]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
@@ -78,13 +78,13 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2019.1/s
 	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
 	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39813]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (4#1) [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (5#1) [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39813]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [D:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (4#1) [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (5#1) [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:70]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 822.031 ; gain = 246.387
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 822.656 ; gain = 246.879
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -97,10 +97,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 822.031 ; gain = 246.387
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 822.656 ; gain = 246.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 822.031 ; gain = 246.387
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 822.656 ; gain = 246.879
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -108,43 +108,43 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'inst'
-Parsing XDC File [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clk_wiz_0_propImpl.xdc].
+Parsing XDC File [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clk_wiz_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/clk_wiz_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [C:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 857.016 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 855.754 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 857.016 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 855.754 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 857.016 ; gain = 281.371
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 855.754 ; gain = 279.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 857.016 ; gain = 281.371
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 855.754 ; gain = 279.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 857.016 ; gain = 281.371
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 855.754 ; gain = 279.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 857.016 ; gain = 281.371
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 855.754 ; gain = 279.977
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -180,7 +180,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 857.016 ; gain = 281.371
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 855.754 ; gain = 279.977
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -192,13 +192,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 885.008 ; gain = 309.363
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 885.824 ; gain = 310.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 885.008 ; gain = 309.363
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 885.824 ; gain = 310.047
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -210,7 +210,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 894.594 ; gain = 318.949
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 895.395 ; gain = 319.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -234,7 +234,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 909.430 ; gain = 333.785
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 910.180 ; gain = 334.402
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -247,7 +247,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 909.430 ; gain = 333.785
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 910.180 ; gain = 334.402
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -259,25 +259,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 909.430 ; gain = 333.785
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 910.180 ; gain = 334.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 909.430 ; gain = 333.785
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 910.180 ; gain = 334.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 909.430 ; gain = 333.785
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 910.180 ; gain = 334.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 909.430 ; gain = 333.785
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 910.180 ; gain = 334.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -306,33 +306,33 @@ Report Instance Areas:
 |2     |  inst   |clk_wiz_0_clk_wiz |     4|
 +------+---------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 909.430 ; gain = 333.785
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 910.180 ; gain = 334.402
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 909.430 ; gain = 298.801
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 909.430 ; gain = 333.785
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 910.180 ; gain = 301.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 910.180 ; gain = 334.402
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 930.754 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 933.227 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 25 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 930.754 ; gain = 614.098
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 930.754 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 933.227 ; gain = 616.328
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 933.227 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP clk_wiz_0, cache-ID = 50b4d814e2fa7a54
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 930.754 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP clk_wiz_0, cache-ID = 7a4126b835fb9961
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 933.227 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/diego/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file clk_wiz_0_utilization_synth.rpt -pb clk_wiz_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 18 13:12:39 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 18 23:11:29 2026...
