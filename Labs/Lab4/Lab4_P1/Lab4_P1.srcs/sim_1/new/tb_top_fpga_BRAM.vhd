@@ -112,6 +112,10 @@ begin
                 
         variable success    : boolean := true;
         
+        variable byte       : unsigned (15 downto 0);
+        
+        variable four_bytes : unsigned (31 downto 0);
+        
         procedure read_pgm is
         begin
             readline(PGM_IN, L_IN); -- skip 
@@ -141,13 +145,66 @@ begin
         procedure send_pgm is
         begin
             send_char(x"01");
-              
+            
+            byte := to_unsigned(rows, 16); -- send rows 2 bytes
+            send_char(byte(7 downto 0));
+            send_char(byte(15 downto 8));
+            
+            byte := to_unsigned(cols, 16); -- send cols 2  bytes
+            send_char(byte(7 downto 0));
+            send_char(byte(15 downto 8));
+            
+            four_bytes := to_unsigned(size, 32);    -- send size 4 bytes
+            send_char(four_bytes(7 downto 0));
+            send_char(four_bytes(15 downto 8));
+            send_char(four_bytes(23 downto 16));
+            send_char(four_bytes(31 downto 24));
+            
+            for i in 0 to size - 1 loop
+                send_char(to_unsigned(img_in(i), 8), i = size -1); --send main data
+            end loop;
         end send_pgm;
-       
+        
+        procedure recieve_pgm is
+        begin
+            send_char(x"02", true);
+            
+            for i in 0 to size - 1 loop
+                rx_char(v);
+                img_out(i) := v;
+            end loop;
+        end recieve_pgm;
+        
+        procedure save_pgm is
+        begin
+            write(L_OUT, string'("P2"));
+            writeline(PGM_OUT, L_OUT);
+            
+            write(L_OUT, integer'image(cols));
+            write(L_OUT, string'(" "));
+            write(L_OUT, integer'image(rows));
+            writeline(PGM_OUT, L_OUT);
+            
+            write(L_OUT, integer'image(max_val));
+            writeline(PGM_OUT, L_OUT);
+            
+            for i in 0 to rows - 1 loop
+                for x in 0 to cols - 1 loop
+                    write(L_OUT, img_out(i * cols + x));
+                    write(L_OUT, string'("  "));
+                end loop;
+                writeline(PGM_OUT, L_OUT);
+            end loop;
+        end save_pgm;
     begin
+        wait for 200 ns;
         sys_rst <= '0';
         wait for 200 ns;
         
+        read_pgm;
+        send_pgm;
+        recieve_pgm;
+        save_pgm;
        
         assert false
             report "End of simulation"

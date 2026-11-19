@@ -178,9 +178,23 @@ begin
             wait for symbol_len/2;
         end rx_char;
         
-        type byte_array is array (0 to 15) of std_logic_vector (7 downto 0);
+         type img_array is array (0 to 4095) of Integer;
         
-        variable bytes      : byte_array;
+        variable img_in     : img_array;
+        
+        variable img_out    : img_array;
+        
+        variable rows       : integer;
+        
+        variable cols       : integer;
+        
+        variable max_val    : integer;
+        
+        variable size       : integer;
+        
+        file PGM_IN         : text open READ_MODE is "feep.pgm";
+        
+        file PGM_OUT        : text open WRITE_MODE is "feep_out.pgm";
         
         variable v          : integer;
         
@@ -189,59 +203,102 @@ begin
         variable L_IN       : line;
         
         variable L_OUT      : line;
-        
-        variable arg        : std_logic_vector (7 downto 0);
-        
-        variable command    : string(1 to 4);
                 
         variable success    : boolean := true;
         
-        file STIM_IN        : text open READ_MODE is "stim_in.txt";
-        file LOG_OUT        : text open WRITE_MODE is "recieved.txt";
+        variable byte       : unsigned (15 downto 0);
+        
+        variable four_bytes : unsigned (31 downto 0);
+        
+        procedure read_pgm is
+        begin
+            readline(PGM_IN, L_IN); -- skip 
+            readline(PGM_IN, L_IN); -- cols and rows 
+            read(L_IN, cols);
+            read(L_IN, rows);
+            readline(PGM_IN, L_IN); -- max pixel value
+            read(L_IN, max_val);
+            
+            size := rows * cols;
+            n    := 0;
+            
+            while not endfile (PGM_IN) loop
+                readline(PGM_IN, L_IN);
+                loop
+                    read(L_IN, v, success);
+                    exit when not success;
+                    img_in(n) := v;
+                    n := n + 1;                        
+               end loop;
+            end loop;
+            
+            assert n = size
+                report "Pixel size is wrong" severity failure;
+        end read_pgm;
+        
+        procedure send_pgm is
+        begin
+            send_char(x"01");
+            
+            byte := to_unsigned(rows, 16); -- send rows 2 bytes
+            send_char(byte(7 downto 0));
+            send_char(byte(15 downto 8));
+            
+            byte := to_unsigned(cols, 16); -- send cols 2  bytes
+            send_char(byte(7 downto 0));
+            send_char(byte(15 downto 8));
+            
+            four_bytes := to_unsigned(size, 32);    -- send size 4 bytes
+            send_char(four_bytes(7 downto 0));
+            send_char(four_bytes(15 downto 8));
+            send_char(four_bytes(23 downto 16));
+            send_char(four_bytes(31 downto 24));
+            
+            for i in 0 to size - 1 loop
+                send_char(to_unsigned(img_in(i), 8), i = size -1); --send main data
+            end loop;
+        end send_pgm;
+        
+        procedure recieve_pgm is
+        begin
+            send_char(x"02", true);
+            
+            for i in 0 to size - 1 loop
+                rx_char(v);
+                img_out(i) := v;
+            end loop;
+        end recieve_pgm;
+        
+        procedure save_pgm is
+        begin
+            write(L_OUT, string'("P2"));
+            writeline(PGM_OUT, L_OUT);
+            
+            write(L_OUT, integer'image(cols));
+            write(L_OUT, string'(" "));
+            write(L_OUT, integer'image(rows));
+            writeline(PGM_OUT, L_OUT);
+            
+            write(L_OUT, integer'image(max_val));
+            writeline(PGM_OUT, L_OUT);
+            
+            for i in 0 to rows - 1 loop
+                for x in 0 to cols - 1 loop
+                    write(L_OUT, img_out(i * cols + x));
+                    write(L_OUT, string'("  "));
+                end loop;
+                writeline(PGM_OUT, L_OUT);
+            end loop;
+        end save_pgm;
     begin
         wait for 200 ns;
         sys_rst <= '0';
         wait for 1 us; -- wait for ui_clk_sync_rst
-        -- TODO Put stimulus here
-        while not endfile (STIM_IN) loop
-            readline(STIM_IN, L_IN);
-            read(L_IN, command);
-            
-            case command is
-                when "TEST" =>
-                    n := 0;
-                    loop 
-                        hread(L_IN, arg, success);
-                        exit when not success;
-                        bytes(n) := arg;
-                        n := n + 1;                        
-                    end loop;
-                    
-                    for i in 0 to n-1 loop
-                        send_char(unsigned(bytes(i)), i = n-1);
-                    end loop;
-                    
-                    for i in 0 to n-1 loop
-                        rx_char(v);
-                        
-                        write (L_OUT, now);
-                        write (L_OUT, string'(" "));
-                        hwrite(L_OUT, std_logic_vector(to_unsigned(v, 8)));
-                        writeline(LOG_OUT, L_OUT);
-                        
-                        assert v = to_integer(unsigned(bytes(i)))
-                            report "Byte " & integer'image(i) & " is wrong Read " & integer'image(to_integer(to_unsigned(v, 8))) & " Expected " & integer'image(to_integer(unsigned(bytes(i))))
-                                severity error;
-                    end loop;
-                when "WAIT" =>
-                    read(L_IN, n);
-                    for i_wait in 1 to n loop
-                        wait until rising_edge(clk);
-                    end loop;
-                
-                when others => report "wrong command: " &command;
-            end case;
-        end loop;
+       
+        read_pgm;
+        send_pgm;
+        recieve_pgm;
+        save_pgm;
 
         assert false
             report "End of simulation"
