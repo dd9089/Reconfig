@@ -178,7 +178,7 @@ begin
     begin
         if clk'event and clk = '1' then
             -- if scount = X"28B" then  ----  for    9600 baud : 100 MHZ / (16 * 9600)   = 651 => 0x28B /
-            if scount12 = X"36" then    ----  for  115200 baud : 100 MHZ / (16 * 115200) =  54 => 0x 36 /
+            if scount12 = X"35" then    ----  for  115200 baud : 100 MHZ / (16 * 115200) =  54 => 0x 36 /
                 scount12 <= (others => '0');
             else
                 scount12 <= scount12 + 1;

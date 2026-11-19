@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -39,6 +41,10 @@ read_vhdl -library xil_defaultlib {
   C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/new/top.vhd
   C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/new/fpga_top_DDR2.vhd
 }
+read_ip -quiet C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
+
 read_ip -quiet C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/axis_data_fifo_transmit/axis_data_fifo_transmit.xci
 set_property used_in_implementation false [get_files -all c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/axis_data_fifo_transmit/axis_data_fifo_transmit_ooc.xdc]
 
@@ -53,10 +59,6 @@ set_property used_in_implementation false [get_files -all c:/Users/DIEGO/Documen
 read_ip -quiet C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/axi_protocol_converter_0/axi_protocol_converter_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/axi_protocol_converter_0/axi_protocol_converter_0_ooc.xdc]
 
-read_ip -quiet c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/mig_7series_0_1/mig_7series_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/mig_7series_0_1/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/mig_7series_0_1/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
-
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -65,6 +67,11 @@ set_property used_in_implementation false [get_files -all c:/Users/DIEGO/Documen
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/constrs_1/new/Nexys4.xdc
+set_property used_in_implementation false [get_files C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/constrs_1/new/Nexys4.xdc]
+
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

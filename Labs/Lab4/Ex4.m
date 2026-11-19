@@ -4,7 +4,7 @@ clear all
 clc
 
 % Read image
-filename = 'Lena.pgm';
+filename = 'lena.pgm';
 im_orig = imread(filename);
 im_orig_info = imfinfo(filename);
 numRows = im_orig_info.Height;
@@ -16,7 +16,7 @@ z = floor(imgSize/20);
 delete(instrfind);
 
 % Create a serial port object
-serialPort = serial('COM3', 'BaudRate', 115200, 'DataBits', 8, 'Parity', 'none', 'StopBit', 1, 'OutputBufferSize', imgSize, 'InputBufferSize', imgSize);
+serialPort = serial('COM5', 'BaudRate', 115200, 'DataBits', 8, 'Parity', 'none', 'StopBit', 1, 'OutputBufferSize', imgSize, 'InputBufferSize', imgSize, 'Timeout', 60);
 
 % open the serial port for reading/writing
 fopen(serialPort);
@@ -40,8 +40,8 @@ fprintf('Writing Image Data to FPGA... '); tic;
 fwrite(serialPort, im_orig(:)); toc;
 
 % request FPGA filters the image
-fprintf('Sending Filter Command to FPGA... '); tic;
-fwrite(serialPort, hex2dec('04'), 'uint8'); toc;
+% fprintf('Sending Filter Command to FPGA... '); tic;
+% fwrite(serialPort, hex2dec('04'), 'uint8'); toc;
 
 % read data back from the FPGA
 fprintf('Sending Readback Command to FPGA... '); tic;
@@ -50,17 +50,19 @@ fwrite(serialPort, hex2dec('02'), 'uint8'); toc;
 fprintf('Reading back from FPGA... '); tic;
 im_final = fread(serialPort, imgSize, 'uint8'); toc;
 
-% read back filtered image from FPGA
-fprintf('Sending Filter-Readback Command to FPGA... '); tic;
-fwrite(serialPort, hex2dec('03'), 'uint8'); toc;
+fprintf('Got %d bytes\n', numel(im_final));
 
-fprintf('Reading back from FPGA... '); tic;
-% TODO Modify the second parameter to match the size of the filtered image
-im_final_filtered = fread(serialPort, imgSize, 'uint8'); toc;
+% read back filtered image from FPGA
+% fprintf('Sending Filter-Readback Command to FPGA... '); tic;
+% fwrite(serialPort, hex2dec('03'), 'uint8'); toc;
+
+% fprintf('Reading back from FPGA... '); tic;
+% % TODO Modify the second parameter to match the size of the filtered image
+% im_final_filtered = fread(serialPort, imgSize, 'uint8'); toc;
 
 im_final = reshape(im_final, [numRows numCols]);
 % TODO Modify numRows and numCols to match the size of the filtered image
-im_final_filtered = reshape(im_final_filtered, [numRows numCols]);
+% im_final_filtered = reshape(im_final_filtered, [numRows numCols]);
 
 % close the serial port
 fclose(serialPort);
@@ -75,8 +77,8 @@ if isequal(im_orig, im_final)
     imshow(mat2gray(im_final));
     title('Received');
     subplot(1,3,3);
-    imshow(mat2gray(im_final_filtered));
-    title('Filtered');
+    % imshow(mat2gray(im_final_filtered));
+    % title('Filtered');
 else
     fprintf('FAILURE!\n');
 end

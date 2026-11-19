@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Nov 18 23:12:17 2026
+| Date         : Thu Nov 19 00:08:53 2026
 | Host         : DESKTOP-RDVBQR0 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file fpga_top_utilization_synth.rpt -pb fpga_top_utilization_synth.pb
 | Design       : fpga_top
@@ -147,13 +147,13 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  175 |        Flop & Latch |
-| LUT4     |   47 |                 LUT |
-| LUT2     |   37 |                 LUT |
-| LUT1     |   35 |                 LUT |
-| LUT5     |   24 |                 LUT |
+| LUT4     |   49 |                 LUT |
+| LUT2     |   38 |                 LUT |
+| LUT1     |   36 |                 LUT |
 | CARRY4   |   23 |          CarryLogic |
+| LUT5     |   21 |                 LUT |
 | LUT6     |   19 |                 LUT |
-| LUT3     |   11 |                 LUT |
+| LUT3     |    9 |                 LUT |
 | LDCE     |    8 |        Flop & Latch |
 | IBUF     |    2 |                  IO |
 | OBUF     |    1 |                  IO |

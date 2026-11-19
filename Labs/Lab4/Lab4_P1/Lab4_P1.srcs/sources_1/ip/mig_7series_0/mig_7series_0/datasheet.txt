@@ -3,7 +3,7 @@
 Vivado Project Options:
    Target Device                   : xc7a100t-csg324
    Speed Grade                     : -1
-   HDL                             : vhdl
+   HDL                             : verilog
    Synthesis Tool                  : VIVADO
 
 MIG Output Options:

@@ -66,6 +66,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -76,11 +77,12 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   add_files -quiet C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.runs/synth_1/fpga_top.dcp
+  read_ip -quiet C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci
   read_ip -quiet C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/axis_data_fifo_transmit/axis_data_fifo_transmit.xci
   read_ip -quiet C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/axis_data_fifo_recieve/axis_data_fifo_recieve.xci
   read_ip -quiet C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/axi_protocol_converter_0/axi_protocol_converter_0.xci
-  read_ip -quiet c:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sources_1/ip/mig_7series_0_1/mig_7series_0.xci
+  read_xdc C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/constrs_1/new/Nexys4.xdc
   link_design -top fpga_top -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
