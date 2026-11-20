@@ -196,8 +196,6 @@ begin
         
         file PGM_OUT        : text open WRITE_MODE is "feep_out.pgm";
         
-        file PGM_FILTERED   : text open WRITE_MODE is "feep_filtered.pgm";
-        
         variable v          : integer;
         
         variable n          : integer;
@@ -256,30 +254,22 @@ begin
             send_char(four_bytes(23 downto 16));
             send_char(four_bytes(31 downto 24));
             
-            for x in 0 to cols - 1 loop
-                for i in 0 to rows - 1 loop
-                    send_char(to_unsigned(img_in(i*cols + x), 8), (x = cols-1) and (i = rows-1)); --send main data
-                end loop;
+            for i in 0 to size - 1 loop
+                send_char(to_unsigned(img_in(i), 8), i = size -1); --send main data
             end loop;
         end send_pgm;
         
-        procedure recieve_pgm( 
-            chr  : in unsigned(7 downto 0);
-            count : in integer
-        ) is
+        procedure recieve_pgm is
         begin
-            send_char(chr, true);
+            send_char(x"02", true);
             
-            for i in 0 to count - 1 loop
+            for i in 0 to size - 1 loop
                 rx_char(v);
                 img_out(i) := v;
             end loop;
         end recieve_pgm;
         
-        procedure save_pgm (
-            file f_out  : text;
-            n_rows  : in integer
-        ) is
+        procedure save_pgm is
         begin
             write(L_OUT, string'("P2"));
             writeline(PGM_OUT, L_OUT);
@@ -294,41 +284,21 @@ begin
             
             for i in 0 to rows - 1 loop
                 for x in 0 to cols - 1 loop
-                    write(L_OUT, img_out(i * rows + i));
+                    write(L_OUT, img_out(i * cols + x));
                     write(L_OUT, string'("  "));
                 end loop;
                 writeline(PGM_OUT, L_OUT);
             end loop;
         end save_pgm;
-        
-        procedure process_pgm is
-        begin
-            send_char(x"04", true);
-            rx_char(v);
-            
-            assert v = 1
-                report "Wrong byte back"
-                severity failure;
-        end process_pgm;
-        
     begin
         wait for 200 ns;
         sys_rst <= '0';
         wait for 1 us; -- wait for ui_clk_sync_rst
        
         read_pgm;
-        report "Read";
         send_pgm;
-        report "Sent";
-        process_pgm;
-        Report "Processed";
-        recieve_pgm(x"02", size);
-        Report "Recieved 02";
-        save_pgm(PGM_OUT, cols);
-        Report "Saved 02";
-        recieve_pgm(x"03", size - 2 * rows);
-        Report "Recieved 03";
-        save_pgm(PGM_FILTERED, cols - 2);
+        recieve_pgm;
+        save_pgm;
 
         assert false
             report "End of simulation"

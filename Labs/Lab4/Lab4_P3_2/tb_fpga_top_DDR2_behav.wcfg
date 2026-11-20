@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_fpga_top_DDR2_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_fpga_top_DDR2" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="82397001743fs"></ZoomStartTime>
+      <ZoomEndTime time="96996071815fs"></ZoomEndTime>
+      <Cursor1Time time="94562893469fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="225"></NameColumnWidth>
+      <ValueColumnWidth column_width="124"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/tb_fpga_top_DDR2/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/sys_rst" type="logic">
+      <obj_property name="ElementShortName">sys_rst</obj_property>
+      <obj_property name="ObjectShortName">sys_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/i_UART_RX" type="logic">
+      <obj_property name="ElementShortName">i_UART_RX</obj_property>
+      <obj_property name="ObjectShortName">i_UART_RX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/o_UART_TX" type="logic">
+      <obj_property name="ElementShortName">o_UART_TX</obj_property>
+      <obj_property name="ObjectShortName">o_UART_TX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_addr" type="array">
+      <obj_property name="ElementShortName">s_ddr2_addr[12:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_addr[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_ba" type="array">
+      <obj_property name="ElementShortName">s_ddr2_ba[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_ba[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_ras_n" type="logic">
+      <obj_property name="ElementShortName">s_ddr2_ras_n</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_ras_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_cas_n" type="logic">
+      <obj_property name="ElementShortName">s_ddr2_cas_n</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_cas_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_we_n" type="logic">
+      <obj_property name="ElementShortName">s_ddr2_we_n</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_we_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_ck_p" type="array">
+      <obj_property name="ElementShortName">s_ddr2_ck_p[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_ck_p[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_ck_n" type="array">
+      <obj_property name="ElementShortName">s_ddr2_ck_n[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_ck_n[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_cke" type="array">
+      <obj_property name="ElementShortName">s_ddr2_cke[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_cke[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_cs_n" type="array">
+      <obj_property name="ElementShortName">s_ddr2_cs_n[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_cs_n[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_dm" type="array">
+      <obj_property name="ElementShortName">s_ddr2_dm[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_dm[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_odt" type="array">
+      <obj_property name="ElementShortName">s_ddr2_odt[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_odt[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_dq" type="array">
+      <obj_property name="ElementShortName">s_ddr2_dq[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_dq[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_dqs_p" type="array">
+      <obj_property name="ElementShortName">s_ddr2_dqs_p[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_dqs_p[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/s_ddr2_dqs_n" type="array">
+      <obj_property name="ElementShortName">s_ddr2_dqs_n[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ddr2_dqs_n[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/fpga_top_0/mig_7series/init_calib_complete" type="logic">
+      <obj_property name="ElementShortName">init_calib_complete</obj_property>
+      <obj_property name="ObjectShortName">init_calib_complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/fpga_top_0/top_0/translator_state" type="other">
+      <obj_property name="ElementShortName">translator_state</obj_property>
+      <obj_property name="ObjectShortName">translator_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/fpga_top_0/top_0/cmd" type="array">
+      <obj_property name="ElementShortName">cmd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cmd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/clk_per_sym" type="other">
+      <obj_property name="ElementShortName">clk_per_sym</obj_property>
+      <obj_property name="ObjectShortName">clk_per_sym</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fpga_top_DDR2/symbol_len" type="other">
+      <obj_property name="ElementShortName">symbol_len</obj_property>
+      <obj_property name="ObjectShortName">symbol_len</obj_property>
+   </wvobject>
+</wave_config>

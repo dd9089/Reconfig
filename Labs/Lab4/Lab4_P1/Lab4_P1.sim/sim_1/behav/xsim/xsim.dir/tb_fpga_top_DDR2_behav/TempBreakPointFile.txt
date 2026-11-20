@@ -1,5 +1,1 @@
 Breakpoint File Version 1.0
-298 true C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sim_1/new/tb_fpga_top_DDR2.vhd
-299 true C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sim_1/new/tb_fpga_top_DDR2.vhd
-300 true C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sim_1/new/tb_fpga_top_DDR2.vhd
-301 true C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sim_1/new/tb_fpga_top_DDR2.vhd

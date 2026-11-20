@@ -16283,7 +16283,7 @@ void wrapper_func_0(char *dp)
 
 void simulate(char *dp)
 {
-iki_register_root_pointers(8, 17185128, -7,0,17186488, -7,0,17187848, -7,0,17189208, -7,0,17187168, -7,0,17188528, -7,0,17189888, -7,0,17185808, -7,0) ; 
+iki_register_root_pointers(8, 17185128, -7,0,17189888, -7,0,17185808, -7,0,17188528, -7,0,17186488, -7,0,17189208, -7,0,17187848, -7,0,17187168, -7,0) ; 
 		iki_schedule_processes_at_time_zero(dp, "xsim.dir/tb_fpga_top_DDR2_behav/xsim.reloc");
 	wrapper_func_0(dp);
 
