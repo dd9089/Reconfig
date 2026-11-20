@@ -196,6 +196,8 @@ begin
         
         file PGM_OUT        : text open WRITE_MODE is "feep_out.pgm";
         
+        file PGM_FILTERED   : text open WRITE_MODE is "feep_filtered.pgm";
+        
         variable v          : integer;
         
         variable n          : integer;
@@ -259,17 +261,23 @@ begin
             end loop;
         end send_pgm;
         
-        procedure recieve_pgm is
+        procedure recieve_pgm( 
+            chr  : in unsigned(7 downto 0);
+            count : in integer
+        ) is
         begin
-            send_char(x"02", true);
+            send_char(chr, true);
             
-            for i in 0 to size - 1 loop
+            for i in 0 to count - 1 loop
                 rx_char(v);
                 img_out(i) := v;
             end loop;
         end recieve_pgm;
         
-        procedure save_pgm is
+        procedure save_pgm (
+            file f_out  : text;
+            n_rows  : in integer
+        ) is
         begin
             write(L_OUT, string'("P2"));
             writeline(PGM_OUT, L_OUT);
@@ -290,6 +298,17 @@ begin
                 writeline(PGM_OUT, L_OUT);
             end loop;
         end save_pgm;
+        
+        procedure process_pgm is
+        begin
+            send_char(x"04", true);
+            rx_char(v);
+            
+            assert v = 1
+                report "Wrong byte back"
+                severity failure;
+        end process_pgm;
+        
     begin
         wait for 200 ns;
         sys_rst <= '0';
@@ -297,8 +316,11 @@ begin
        
         read_pgm;
         send_pgm;
-        recieve_pgm;
-        save_pgm;
+        process_pgm;
+        recieve_pgm(x"02", size);
+        save_pgm(PGM_OUT, rows);
+        recieve_pgm(x"03", size - 2 * cols);
+        save_pgm(PGM_FILTERED, rows - 2);
 
         assert false
             report "End of simulation"
