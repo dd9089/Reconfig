@@ -16,7 +16,7 @@ z = floor(imgSize/20);
 delete(instrfind);
 
 % Create a serial port object
-serialPort = serial('COM3', 'BaudRate', 115200, 'DataBits', 8, 'Parity', 'none', 'StopBit', 1, 'OutputBufferSize', imgSize, 'InputBufferSize', imgSize, 'Timeout', 60);
+serialPort = serial('COM5', 'BaudRate', 115200, 'DataBits', 8, 'Parity', 'none', 'StopBit', 1, 'OutputBufferSize', imgSize, 'InputBufferSize', imgSize, 'Timeout', 120);
 
 % open the serial port for reading/writing
 fopen(serialPort);
@@ -43,6 +43,9 @@ fwrite(serialPort, im_orig(:)); toc;
 fprintf('Sending Filter Command to FPGA... '); tic;
 fwrite(serialPort, hex2dec('04'), 'uint8'); toc;
 
+status = fread(serialPort, 1, 'uint8');
+fprintf('Filter status: %d\n', status);
+
 % read data back from the FPGA
 fprintf('Sending Readback Command to FPGA... '); tic;
 fwrite(serialPort, hex2dec('02'), 'uint8'); toc;
@@ -56,11 +59,14 @@ fwrite(serialPort, hex2dec('03'), 'uint8'); toc;
 
 % fprintf('Reading back from FPGA... '); tic;
 % % TODO Modify the second parameter to match the size of the filtered image
-im_final_filtered = fread(serialPort, imgSize, 'uint8'); toc;
+im_final_filtered = fread(serialPort, imgSize - 2*numRows, 'uint8'); toc;
+
+fprintf('Got %d raw bytes\n', numel(im_final));
+fprintf('Got %d filtered bytes\n', numel(im_final_filtered));
 
 im_final = reshape(im_final, [numRows numCols]);
 % TODO Modify numRows and numCols to match the size of the filtered image
-im_final_filtered = reshape(im_final_filtered, [numRows numCols]);
+im_final_filtered = reshape(im_final_filtered, [numRows numCols-2]);
 
 % close the serial port
 fclose(serialPort);
