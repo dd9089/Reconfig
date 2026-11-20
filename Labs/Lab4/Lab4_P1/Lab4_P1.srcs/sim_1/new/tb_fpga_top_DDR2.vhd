@@ -256,8 +256,10 @@ begin
             send_char(four_bytes(23 downto 16));
             send_char(four_bytes(31 downto 24));
             
-            for i in 0 to size - 1 loop
-                send_char(to_unsigned(img_in(i), 8), i = size -1); --send main data
+            for x in 0 to cols - 1 loop
+                for i in 0 to rows - 1 loop
+                    send_char(to_unsigned(img_in(i*cols + x), 8), (x = cols-1) and (i = rows-1)); --send main data
+                end loop;
             end loop;
         end send_pgm;
         
@@ -292,7 +294,7 @@ begin
             
             for i in 0 to rows - 1 loop
                 for x in 0 to cols - 1 loop
-                    write(L_OUT, img_out(i * cols + x));
+                    write(L_OUT, img_out(i * rows + i));
                     write(L_OUT, string'("  "));
                 end loop;
                 writeline(PGM_OUT, L_OUT);
@@ -322,11 +324,11 @@ begin
         Report "Processed";
         recieve_pgm(x"02", size);
         Report "Recieved 02";
-        save_pgm(PGM_OUT, rows);
+        save_pgm(PGM_OUT, cols);
         Report "Saved 02";
-        recieve_pgm(x"03", size - 2 * cols);
+        recieve_pgm(x"03", size - 2 * rows);
         Report "Recieved 03";
-        save_pgm(PGM_FILTERED, rows - 2);
+        save_pgm(PGM_FILTERED, cols - 2);
 
         assert false
             report "End of simulation"

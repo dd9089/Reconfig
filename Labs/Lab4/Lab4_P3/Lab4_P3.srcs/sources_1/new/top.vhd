@@ -674,7 +674,7 @@ begin
     
     size <= unsigned(header(63 downto 32));
     
-    c <= x"0000" & unsigned(header(31 downto 16));
+    c <= x"0000" & unsigned(header(15 downto 0));
     
     f_size <= size - (c(30 downto 0) & '0');
     

@@ -2,7 +2,7 @@
 2019.1
 May 24 2019
 15:06:07
-C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sim_1/new/tb_fpga_top_DDR2.vhd,1795159877,vhdl,,,,tb_fpga_top_ddr2,,,,,,,,
+C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P1/Lab4_P1.srcs/sim_1/new/tb_fpga_top_DDR2.vhd,1795185772,vhdl,,,,tb_fpga_top_ddr2,,,,,,,,
 C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.sim/sim_1/behav/xsim/glbl.v,1795159877,verilog,,,,glbl,,,,,,,,
 C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/ip/axi_protocol_converter_0/sim/axi_protocol_converter_0.v,1795159878,verilog,,,,axi_protocol_converter_0,,,../../../../Lab4_P3.ip_user_files/ipstatic/hdl;../../../../Lab4_P3.srcs/sources_1/ip/clk_wiz_0,,,,,
 C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/ip/axis_data_fifo_recieve/sim/axis_data_fifo_recieve.v,1795159878,verilog,,C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_addr_decode.v,,axis_data_fifo_recieve,,,../../../../Lab4_P3.ip_user_files/ipstatic/hdl;../../../../Lab4_P3.srcs/sources_1/ip/clk_wiz_0,,,,,
@@ -115,5 +115,5 @@ C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/new/M
 C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/new/MLUART_TX.vhd,1795159878,vhdl,,,,mluart_tx,,,,,,,,
 C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/new/fpga_top_DDR2.vhd,1795159878,vhdl,,,,fpga_top,,,,,,,,
 C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/new/median_filter.vhd,1795159878,vhdl,,,,median_filter,,,,,,,,
-C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/new/top.vhd,1795159878,vhdl,C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/new/fpga_top_DDR2.vhd,,,top,,,,,,,,
+C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/new/top.vhd,1795185491,vhdl,C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/new/fpga_top_DDR2.vhd,,,top,,,,,,,,
 C:/Users/DIEGO/Documents/Reconfig/Labs/Lab4/Lab4_P3/Lab4_P3.srcs/sources_1/new/two_sort.vhd,1795159878,vhdl,,,,two_sort,,,,,,,,
