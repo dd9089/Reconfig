@@ -315,11 +315,17 @@ begin
         wait for 1 us; -- wait for ui_clk_sync_rst
        
         read_pgm;
+        report "Read";
         send_pgm;
+        report "Sent";
         process_pgm;
+        Report "Processed";
         recieve_pgm(x"02", size);
+        Report "Recieved 02";
         save_pgm(PGM_OUT, rows);
+        Report "Saved 02";
         recieve_pgm(x"03", size - 2 * cols);
+        Report "Recieved 03";
         save_pgm(PGM_FILTERED, rows - 2);
 
         assert false
